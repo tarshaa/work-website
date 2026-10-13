@@ -197,7 +197,9 @@ window.PORTFOLIO = [
         "Explore FLORA",
         "https://flora.ai/"
       ]
-    ]
+    ],
+    "animation": "assets/canvas-microinteractions.gif",
+    "assetImage": "assets/elements-panel.png"
   },
   {
     "id": "feature-demos",
@@ -310,7 +312,8 @@ window.PORTFOLIO = [
         "https://flora.ai/"
       ]
     ],
-    "live": "https://flora.ai/studio/fashion"
+    "live": "https://flora.ai/studio/fashion",
+    "animation": "assets/fashion-studio.gif"
   },
   {
     "id": "fundraise",
