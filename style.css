@@ -112,3 +112,18 @@ dialog.mobile-menu{inset:0 0 0 auto;margin:0;width:min(340px,88vw);max-width:non
   }
   .detail-media .asset-gallery { gap: 8px; }
 }
+
+.asset-gallery { container-type: size; }
+.asset-gallery .asset-window {
+  flex: 0 1 auto;
+  width: min(100%, calc((100cqh - 36px) * var(--asset-ratio)));
+  height: auto;
+}
+.asset-gallery:has(.asset-window:nth-child(2)) .asset-window {
+  max-width: 38%;
+}
+@media (max-width: 500px) {
+  .asset-gallery .asset-window {
+    width: min(100%, calc((100cqh - 20px) * var(--asset-ratio)));
+  }
+}
