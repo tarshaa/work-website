@@ -6,11 +6,15 @@ const href=p=>p.live||`${p.id}.html`;
 const projectLink=(p,label)=>p.live?external(label,p.live):`<a href="${href(p)}">${esc(label)} →</a>`;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function video(file,label,controls=false){return `<video class="uncropped-video" ${controls?'controls':''} ${reduced?'':'autoplay'} muted loop playsinline preload="metadata" aria-label="${esc(label)}"><source src="assets/${file}" type="video/mp4"></video>`;}
-function image(n,label){return `<img class="uncropped-image" src="${slideFile(n)}" alt="${esc(label)}" loading="lazy" decoding="async">`;}
+function image(n,label){
+ const p=projects.find(p=>p.slide===n);
+ const regions=n===7?[[.351,.147,.313,.382],[.677,.146,.304,.765],[.375,.68,.285,.21]]:n===9?[[.225,.17,.325,.285],[.214,.552,.167,.30],[.597,.463,.344,.392]]:n===11?[[.453,.09,.381,.38],[.448,.525,.408,.405]]:n===3?[[.414,.207,.218,.746],[.684,.216,.267,.282],[.677,.739,.26,.18]]:[p?.crop||(n===11?[.443,.084,.414,.86]:[0,0,1,1])];
+ return `<div class="asset-gallery ${n===3?'medal-assets':''}">${regions.map(([x,y,w,h],i)=>`<div class="asset-window" style="--asset-ratio:${w*16/(h*9)};--asset-width:${100/w}%;--asset-left:${-x/w*100}%;--asset-top:${-y/h*100}%"><img src="${slideFile(n)}" alt="${esc(label)}${regions.length>1?' — asset '+(i+1):''}" loading="lazy" decoding="async"></div>`).join('')}</div>`;
+}
 const selected=document.body.dataset.project;
 if(selected){
  const p=projects.find(p=>p.id===selected);
- document.getElementById('main').innerHTML=`<a class="detail-back" href="./#${p.id}">← Back to work</a><h1>${esc(p.title)}</h1><p class="detail-meta">${esc(p.role||p.category)}${p.date?' · '+esc(p.date):''}</p><p class="detail-description">${esc(p.journey||p.focus)}</p><div class="detail-media">${p.video?video(p.video,p.title,true):''}${p.slide?image(p.slide,p.title+' — complete portfolio slide'):''}${p.extraVideo?video(p.extraVideo,p.title,true):''}${p.extraDescription?`<p>${esc(p.extraDescription)}</p>`:''}${(p.extraSlides||[]).map(n=>image(n,p.title+' — additional work')).join('')}</div>${p.objects?`<div class="detail-objects">${p.objects.map(([n,d])=>`<p>${esc(n)}<br><small>${esc(d)}</small></p>`).join('')}</div>`:''}<div class="detail-links">${p.links.map(([l,u])=>external(l,u)).join('')}${p.node?external('Original portfolio slide',`https://www.figma.com/deck/8pdDowjy9j9aVVz4kEyEts/Tarshaa-s-Portfolio?node-id=${p.node}`):''}</div>`;
+ document.getElementById('main').innerHTML=`<a class="detail-back" href="./#${p.id}">← Back to work</a><h1>${esc(p.title)}</h1><p class="detail-meta">${esc(p.role||p.category)}${p.date?' · '+esc(p.date):''}</p><p class="detail-description">${esc(p.journey||p.focus)}</p><div class="detail-media">${p.video?video(p.video,p.title,true):''}${p.slide?image(p.slide,p.title+' — project assets'):''}${p.extraVideo?video(p.extraVideo,p.title,true):''}${p.extraDescription?`<p>${esc(p.extraDescription)}</p>`:''}${(p.extraSlides||[]).map(n=>image(n,p.title+' — additional work')).join('')}</div>${p.objects?`<div class="detail-objects">${p.objects.map(([n,d])=>`<p>${esc(n)}<br><small>${esc(d)}</small></p>`).join('')}</div>`:''}<div class="detail-links">${p.links.map(([l,u])=>external(l,u)).join('')}</div>`;
 }else{
  const work=projects.filter(p=>!p.lab),lab=projects.filter(p=>p.lab);
  const nav=(ps)=>ps.map((p,i)=>`<a href="${href(p)}" ${p.live?'target="_blank" rel="noopener noreferrer"':''}><span>${i+1}.</span>${esc(p.title)}</a>`).join('');
