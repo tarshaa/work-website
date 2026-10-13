@@ -8,7 +8,7 @@ window.PORTFOLIO = [
     "date": "2025–2026",
     "role": "Product design",
     "category": "Workflow discovery, interaction design",
-    "journey": "Users discover a technique through visual examples, upload an image, and run the workflow. I organized the experience around inputs and results, with clear routes to download, rerun, or continue editing.",
+    "journey": "I designed a guided AI workflow from visual discovery to generation, with clear inputs and actions to download, rerun, or edit results.",
     "focus": "A clear path from discovery to a usable result.",
     "steps": [
       "Discover a technique",
@@ -39,7 +39,7 @@ window.PORTFOLIO = [
     "date": "2025–2026",
     "role": "Product design · model benchmarking",
     "category": "Model evaluation, decision support",
-    "journey": "Users choose models while working within a shared team allowance. I made usage visible through the team-pool display and explored model behavior through tasting notes, giving creators context for deciding what to try next.",
+    "journey": "I made shared model usage visible and explored model behavior through tasting notes, helping teams choose what to try next.",
     "focus": "Giving people context for model choice and shared usage.",
     "steps": [
       "Understand team usage",
@@ -72,7 +72,7 @@ window.PORTFOLIO = [
     "date": "2026",
     "role": "Brand & product design · contract",
     "category": "Social interaction, motion & visual systems",
-    "journey": "Players browse clips and game reviews, then respond through likes, comments, and sharing. I designed the liked-clip feedback and rating cards to connect each reaction with the player, game, and opinion behind it.",
+    "journey": "I designed liked-clip feedback and game rating cards, making social interactions feel responsive and keeping player context clear.",
     "focus": "Connecting a reaction to its player, game, and context.",
     "steps": [
       "Browse clips & reviews",
@@ -107,7 +107,7 @@ window.PORTFOLIO = [
     "role": "Product & brand design",
     "sourceLabel": "Physical",
     "category": "AI assistants, user control",
-    "journey": "Users introduce their work to FAUNA and set preferences for future tasks. I paired the assistant’s identity with editable settings, giving people a clear way to shape how it supports their creative process.",
+    "journey": "I designed editable preferences and an assistant identity, giving users control over how FAUNA supports their creative work.",
     "focus": "Making an assistant’s behavior something people can shape.",
     "steps": [
       "Introduce your work",
@@ -138,7 +138,7 @@ window.PORTFOLIO = [
     "extraSlides": [
       11
     ],
-    "extraDescription": "Viewers meet FAUNA through examples that turn a creative brief into visual directions. I built its identity into the demonstrations, helping people picture how the assistant could fit into their own process."
+    "extraDescription": "I built FAUNA’s identity into demos that turn a creative brief into visual directions."
   },
   {
     "id": "landing",
@@ -149,7 +149,7 @@ window.PORTFOLIO = [
     "date": "2025–present",
     "role": "Web design",
     "category": "Product storytelling, first-use experience",
-    "journey": "Visitors explore creative examples before taking their first step into FLORA. I paired a focused headline and entry action with expressive imagery, helping people understand what they could make and where to begin.",
+    "journey": "I designed FLORA’s landing experience around creative examples and a clear entry point, helping visitors understand the product and get started.",
     "focus": "Showing what a tool makes possible before asking people to start.",
     "steps": [
       "Explore creative examples",
@@ -179,7 +179,7 @@ window.PORTFOLIO = [
     "date": "2025–present",
     "role": "Interaction design",
     "category": "Motion, progress & working states",
-    "journey": "Users move between media on the canvas and generation tasks. I placed interaction feedback and working states close to the content, helping them follow progress and stay oriented while a result is being created.",
+    "journey": "I designed canvas microinteractions and generation states that keep feedback close to the work, making system progress easier to follow.",
     "focus": "Keeping progress legible while the system is working.",
     "steps": [
       "Work on the canvas",
@@ -207,8 +207,8 @@ window.PORTFOLIO = [
     "company": "FLORA",
     "date": "2025–2026",
     "role": "Product marketing",
-    "category": "Feature education, research communication",
-    "journey": "Users discover shortcuts and editing tools through focused demonstrations. I centered each piece on one recognizable action, making a feature easier to understand and try in their own workspace.",
+    "category": "Feature education, workflow adoption",
+    "journey": "I created focused demos of shortcuts and editing tools, showing users how features fit into their everyday workflow.",
     "focus": "One recognizable action per demonstration.",
     "steps": [
       "Discover a tool",
@@ -245,7 +245,7 @@ window.PORTFOLIO = [
     "date": "2025–2026",
     "role": "Physical · print · object design",
     "category": "Editorial systems, screen-to-print design",
-    "journey": "People explore FLORA through guides and objects they can keep. I used editorial hierarchy and a shared visual language to carry the experience from screen to print.",
+    "journey": "I extended FLORA’s visual system into guides and objects, using clear hierarchy to make product information approachable beyond the screen.",
     "focus": "A shared visual language that travels beyond the screen.",
     "crop": [
       0.295,
@@ -291,7 +291,7 @@ window.PORTFOLIO = [
     "date": "2025–2026",
     "role": "Brand & product design",
     "category": "AI workflows, product design",
-    "journey": "Users choose a fashion workflow, add a sketch and references, then review generated images. I kept inputs, controls, and results together so creators can develop an idea without losing sight of their source material.",
+    "journey": "I designed fashion workflows that keep sketches, references, controls, and generated results together, helping creators iterate with their source material in view.",
     "focus": "Keeping context alongside generated results.",
     "steps": [
       "Choose a workflow",
@@ -320,8 +320,8 @@ window.PORTFOLIO = [
     "company": "FLORA",
     "date": "2025–present",
     "role": "Scripting, filming & editing",
-    "category": "Launch storytelling, motion & film",
-    "journey": "Viewers follow FLORA’s funding announcement through the people behind it. I scripted, filmed, and edited the sequence to move from initial interest to a clear understanding of the milestone and its supporters.",
+    "category": "Launch communication, visual storytelling",
+    "journey": "I scripted, filmed, and edited FLORA’s Series A announcement, shaping a clear launch story around the company and its supporters.",
     "focus": "A funding milestone told through the people behind it.",
     "steps": [
       "Build initial interest",
@@ -350,7 +350,7 @@ window.PORTFOLIO = [
     "date": "2024–2025",
     "role": "Brand design · trailers",
     "category": "Film, editing & visual storytelling",
-    "journey": "Trailer work for The Assessment, Sister Midnight, 40 Acres, Thelma, and Lake George.",
+    "journey": "Brand and trailer work across five Magnolia releases, bringing attention to pacing, visual hierarchy, and storytelling.",
     "focus": "Stories shaped through sequence, pace, and visual detail.",
     "crop": [
       0.23,
@@ -385,7 +385,7 @@ window.PORTFOLIO = [
     "date": "",
     "role": "Design & marketing",
     "category": "Developer surfaces, AI tools",
-    "journey": "Designed and marketed surfaces for FLORA’s MCP and API.",
+    "journey": "I designed and marketed FLORA’s MCP and API surfaces, extending the product’s visual language to developer tools.",
     "focus": "Bringing the developer platform into the product’s visual language.",
     "video": "flora-mcp-api.mp4",
     "links": [
@@ -402,7 +402,7 @@ window.PORTFOLIO = [
     "company": "Cook Lab",
     "role": "Build",
     "category": "Creative tooling, code",
-    "journey": "A CLI for creatives. Sync your Pinterest boards locally so Claude can search them by mood, aesthetic, and pattern. Zero config, just be logged in.",
+    "journey": "I built a CLI that syncs Pinterest boards locally so Claude can search creative references by mood, aesthetic, and pattern.",
     "focus": "Creative references, ready to search.",
     "video": "creative-context-cli.mp4",
     "lab": true,
