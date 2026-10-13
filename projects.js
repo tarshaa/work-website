@@ -240,7 +240,7 @@ window.PORTFOLIO = [
     "id": "physical",
     "slide": 10,
     "node": "5001-72",
-    "title": "Physical stuff",
+    "title": "Physical objects",
     "company": "FLORA",
     "date": "2025–2026",
     "role": "Physical · print · object design",
