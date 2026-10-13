@@ -64,40 +64,6 @@ window.PORTFOLIO = [
     ]
   },
   {
-    "id": "medal",
-    "slide": 3,
-    "node": "7149-11",
-    "title": "Medal / General Intuition",
-    "company": "Medal / General Intuition",
-    "date": "2026",
-    "role": "Brand & product design · contract",
-    "category": "Social interaction, motion & visual systems",
-    "journey": "I designed liked-clip feedback and game rating cards, making social interactions feel responsive and keeping player context clear.",
-    "focus": "Connecting a reaction to its player, game, and context.",
-    "steps": [
-      "Browse clips & reviews",
-      "Like, comment, or share",
-      "See interaction feedback"
-    ],
-    "crop": [
-      0.41,
-      0.157,
-      0.56,
-      0.8
-    ],
-    "notes": [
-      "Liked-clip animation + product flow",
-      "Game rating cards",
-      "Brand bits"
-    ],
-    "links": [
-      [
-        "General Intuition",
-        "https://www.generalintuition.com/"
-      ]
-    ]
-  },
-  {
     "id": "fauna-settings",
     "slide": 8,
     "node": "7006-6",
