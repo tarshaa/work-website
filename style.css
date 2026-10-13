@@ -74,3 +74,41 @@ dialog.mobile-menu{inset:0 0 0 auto;margin:0;width:min(340px,88vw);max-width:non
 @media(max-width:760px){.sidebar{padding-right:70px}.reference-intro{margin-bottom:0}.sidebar>.sidebar-bottom,.sidebar>.lab-sidebar,.sidebar>.mobile-jump{display:none}.mobile-menu-toggle{display:block;position:absolute;right:20px;top:32px;width:36px;height:36px;padding:0;border:0;background:none;color:#b9d9ff;font-size:30px;line-height:36px;cursor:pointer}main{padding-top:22px}}
 
 .asset-gallery{display:grid;gap:20px}.asset-window{position:relative;aspect-ratio:var(--asset-ratio);overflow:hidden;background:#000;border-radius:8px}.asset-window img{position:absolute;width:var(--asset-width);max-width:none;height:auto;left:var(--asset-left);top:var(--asset-top)}.medal-assets{grid-template-columns:1fr 1.15fr;align-items:start}.medal-assets .asset-window:first-child{grid-row:span 2}.detail-media .medal-assets{gap:25px}@media(max-width:500px){.medal-assets{grid-template-columns:1fr}.medal-assets .asset-window:first-child{grid-row:auto;max-width:310px;width:100%;justify-self:center}}
+
+/* Keep the original compact presentation footprint, without deck writing. */
+.asset-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 18px;
+  overflow: hidden;
+  background: #000;
+  border-radius: 10px;
+}
+.asset-gallery .asset-window {
+  flex: 1 1 0;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+}
+.medal-assets .asset-window:first-child {
+  flex: 0 0 26%;
+  width: 26%;
+  grid-row: auto;
+}
+.medal-assets .asset-window:nth-child(2) { flex: 0 0 38%; }
+.medal-assets .asset-window:nth-child(3) { flex: 0 0 24%; }
+.detail-media .asset-gallery { gap: 18px; }
+@media (max-width: 500px) {
+  .asset-gallery { padding: 10px; gap: 8px; }
+  .medal-assets .asset-window:first-child {
+    width: 26%;
+    max-width: none;
+    flex: 0 0 26%;
+  }
+  .detail-media .asset-gallery { gap: 8px; }
+}
