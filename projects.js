@@ -37,9 +37,9 @@ window.PORTFOLIO = [
     "title": "Taste benching & model evals",
     "company": "FLORA",
     "date": "2025–2026",
-    "role": "Product design · model benchmarking",
+    "role": "Product design · model evaluation",
     "category": "Model evaluation, decision support",
-    "journey": "I made shared model usage visible and explored model behavior through tasting notes, helping teams choose what to try next.",
+    "journey": "I translate model behavior into creative workflow guidance through authored reviews, alongside product surfaces that make shared team usage visible.",
     "focus": "Giving people context for model choice and shared usage.",
     "steps": [
       "Understand team usage",
@@ -54,8 +54,16 @@ window.PORTFOLIO = [
     ],
     "links": [
       [
+        "Read Recraft v4 tasting notes",
+        "https://flora.ai/blog/tasting-notes-recraft-v4"
+      ],
+      [
         "Read Claude Opus 4.5 tasting notes",
         "https://flora.ai/blog/tasting-notes-claude-opus-4.5"
+      ],
+      [
+        "Read the team’s Omni evaluation",
+        "https://flora.ai/blog/omni-is-an-editor-not-a-filmmaker.-use-it-accordingly."
       ],
       [
         "View pricing",
