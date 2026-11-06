@@ -24,11 +24,30 @@ window.PORTFOLIO = [
     "video": "techniques.mp4",
     "links": [
       [
-        "Explore FLORA",
-        "https://flora.ai/"
+        "Explore FLORA Techniques",
+        "https://flora.ai/product-technique"
       ]
     ],
-    "live": "https://flora.ai/product-technique"
+    "designs": [
+      {
+        "image": "technique-discovery.webp",
+        "title": "Discover a reusable workflow",
+        "copy": "Search, categories, and visual examples help creators choose a Technique before opening the canvas. The library makes a complex workflow approachable through a recognizable creative outcome.",
+        "width": 720
+      },
+      {
+        "image": "technique-inputs.webp",
+        "title": "Make setup explicit",
+        "copy": "Named inputs clarify which assets a Technique needs. Ready checks confirm that setup is complete, while cost and time estimates set expectations before a run. These checks describe readiness, not output quality; estimates vary by model.",
+        "width": 720
+      },
+      {
+        "image": "technique-evaluation-loop.webp",
+        "title": "Evaluate against a defined standard",
+        "copy": "This diagram outlines a proposed evaluation loop: compare a workflow with domain rules and reference data, assess conformance, and feed findings back into the next iteration. Human review remains important when the criteria depend on creative judgment.",
+        "width": 720
+      }
+    ]
   },
   {
     "id": "models",
@@ -173,7 +192,27 @@ window.PORTFOLIO = [
       ]
     ],
     "animation": "assets/canvas-microinteractions.gif",
-    "assetImage": "assets/elements-panel.png"
+    "assetImage": "assets/elements-panel-hires.webp",
+    "designs": [
+      {
+        "image": "elements-panel-hires.webp",
+        "title": "Reusable references, with a clear preview",
+        "copy": "The Elements panel brings reference images, category, and preview into one place so creators can prepare an object before using it in a generation.",
+        "width": 640
+      },
+      {
+        "image": "elements-library.webp",
+        "title": "Find and organize Elements",
+        "copy": "A dedicated library keeps saved objects alongside folders and connected asset sources, supporting reuse across a creative workspace.",
+        "width": 720
+      },
+      {
+        "image": "element-card.webp",
+        "title": "Recognize a saved object",
+        "copy": "The card pairs a reference collage with its name and object type. Selection, edit, and overflow actions stay close to the asset.",
+        "width": 240
+      }
+    ]
   },
   {
     "id": "feature-demos",
@@ -229,65 +268,72 @@ window.PORTFOLIO = [
       0.653,
       0.72
     ],
-    "objects": [
-      [
-        "Personal Creator Packet",
-        "Physical · 2026"
-      ],
-      [
-        "Manual for Creative Teams",
-        "Print · 2025"
-      ],
-      [
-        "Magnets",
-        "Physical object · 2025"
-      ],
-      [
-        "FLORA Object Universe",
-        "Created through Discourse"
-      ],
-      [
-        "Sticker",
-        "Physical · 2025"
-      ]
-    ],
     "links": [
       [
         "Explore FLORA",
         "https://flora.ai/"
       ]
+    ],
+    "designs": [
+      {
+        "image": "physical-field-guide.webp",
+        "title": "Field guide",
+        "width": 300
+      },
+      {
+        "image": "physical-manual.webp",
+        "title": "Operating manual",
+        "width": 320
+      },
+      {
+        "image": "physical-creator-packet.webp",
+        "title": "Personal creator packet",
+        "width": 170
+      },
+      {
+        "image": "physical-magnets.webp",
+        "title": "Magnets",
+        "width": 165
+      },
+      {
+        "image": "physical-object.webp",
+        "title": "Physical object",
+        "width": 110
+      },
+      {
+        "image": "physical-sticker.webp",
+        "title": "Sticker",
+        "width": 135
+      },
+      {
+        "image": "physical-evolution.webp",
+        "title": "Creative evolution spread",
+        "width": 340
+      },
+      {
+        "image": "physical-workflow.webp",
+        "title": "Workflow spread",
+        "width": 540
+      }
     ]
   },
   {
-    "id": "studios",
-    "slide": 2,
-    "node": "5001-19",
-    "title": "FLORA Studios",
+    "id": "mcp-api",
+    "title": "FLORA MCP & API",
     "company": "FLORA",
-    "date": "2025–2026",
-    "role": "Brand & product design",
-    "category": "AI workflows, product design",
-    "journey": "I designed fashion workflows that keep sketches, references, controls, and generated results together, helping creators iterate with their source material in view.",
-    "focus": "Keeping context alongside generated results.",
-    "steps": [
-      "Choose a workflow",
-      "Add sketch & references",
-      "Review generated images"
-    ],
-    "crop": [
-      0.275,
-      0.127,
-      0.695,
-      0.738
-    ],
+    "date": "",
+    "role": "Design & marketing",
+    "category": "Developer surfaces, AI tools",
+    "journey": "I designed and marketed FLORA’s MCP and API surfaces, extending the product’s visual language to developer tools.",
+    "focus": "Bringing the developer platform into the product’s visual language.",
+    "video": "flora-mcp-api.mp4",
     "links": [
       [
-        "Explore FLORA",
-        "https://flora.ai/"
+        "Explore FLORA MCP & API",
+        "https://flora.ai/mcp"
       ]
     ],
-    "live": "https://flora.ai/studio/fashion",
-    "animation": "assets/fashion-studio.gif"
+    "extra": true
   },
   {
     "id": "fundraise",
@@ -315,6 +361,23 @@ window.PORTFOLIO = [
       [
         "Watch the announcement",
         "https://www.linkedin.com/posts/weberwong_flora-has-raised-a-42m-series-a-led-by-ugcPost-7421960203073540097--fYf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADAFupgBTHRzGMUMgBHQX84tVoP34O10JiQ"
+      ]
+    ]
+  },
+  {
+    "id": "creative-context-cli",
+    "title": "Creative Context CLI",
+    "company": "Cook Lab",
+    "role": "Build",
+    "category": "Creative tooling, code",
+    "journey": "I built a CLI that syncs Pinterest boards locally so Claude can search creative references by mood, aesthetic, and pattern.",
+    "focus": "Creative references, ready to search.",
+    "video": "creative-context-cli.mp4",
+    "lab": true,
+    "links": [
+      [
+        "View on X",
+        "https://x.com/tartartuna/status/2042989251759952303?s=20"
       ]
     ]
   },
@@ -352,41 +415,6 @@ window.PORTFOLIO = [
       [
         "Trailer / social edit 02",
         "https://www.instagram.com/reel/DHZVL02Sm8u/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      ]
-    ]
-  },
-  {
-    "id": "mcp-api",
-    "title": "FLORA MCP & API",
-    "company": "FLORA",
-    "date": "",
-    "role": "Design & marketing",
-    "category": "Developer surfaces, AI tools",
-    "journey": "I designed and marketed FLORA’s MCP and API surfaces, extending the product’s visual language to developer tools.",
-    "focus": "Bringing the developer platform into the product’s visual language.",
-    "video": "flora-mcp-api.mp4",
-    "links": [
-      [
-        "Explore FLORA MCP & API",
-        "https://flora.ai/mcp"
-      ]
-    ],
-    "extra": true
-  },
-  {
-    "id": "creative-context-cli",
-    "title": "Creative Context CLI",
-    "company": "Cook Lab",
-    "role": "Build",
-    "category": "Creative tooling, code",
-    "journey": "I built a CLI that syncs Pinterest boards locally so Claude can search creative references by mood, aesthetic, and pattern.",
-    "focus": "Creative references, ready to search.",
-    "video": "creative-context-cli.mp4",
-    "lab": true,
-    "links": [
-      [
-        "View on X",
-        "https://x.com/tartartuna/status/2042989251759952303?s=20"
       ]
     ]
   }
