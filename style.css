@@ -28,7 +28,7 @@ main{margin-left:25%;padding:20px;max-width:none}
 
 /* Dark treatment drawn from the main portfolio. */
 :root{color-scheme:dark;--paper:#08080d;--ink:#e0e0e5;--muted:#b5b5bf;--line:#34343d;--accent:#99c9ff}
-body{background-color:#08080d;background-image:linear-gradient(to bottom,rgba(193,157,236,.14) 0%,rgba(153,85,240,.17) 20%,rgba(111,0,35,.16) 37%,rgba(9,12,55,.16) 52%,rgba(92,5,34,.14) 64%,rgba(239,73,21,.18) 67%,rgba(193,151,245,.20) 67.3%,rgba(52,11,44,.12) 71%,rgba(0,124,189,.16) 84%,rgba(169,121,225,.15) 100%);background-attachment:fixed;background-repeat:no-repeat;color:var(--ink)}
+body{background-color:#08080d;--full-portfolio-gradient:linear-gradient(to bottom,rgba(193,157,236,.14) 0%,rgba(153,85,240,.17) 20%,rgba(111,0,35,.16) 37%,rgba(9,12,55,.16) 52%,rgba(92,5,34,.14) 64%,rgba(239,73,21,.18) 67%,rgba(193,151,245,.20) 67.3%,rgba(52,11,44,.12) 71%,rgba(0,124,189,.16) 84%,rgba(169,121,225,.15) 100%);background-image:var(--full-portfolio-gradient);background-attachment:fixed;background-repeat:no-repeat;color:var(--ink)}
 body:before{display:block;z-index:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 4px,rgba(255,255,255,.035) 4px,rgba(255,255,255,.035) 5px)}
 .sidebar{background:transparent;z-index:2}main{position:relative;z-index:1}
 .project-links .text-button,.project-links a,.motion-demo summary{color:#99c9ff}
@@ -189,3 +189,49 @@ body::before {
 :root .mobile-menu-bar { color: var(--muted); }
 :root .mobile-menu-close, :root #close-dialog { color: var(--ink); }
 :root .mobile-menu-contacts { border-color: var(--line); }
+
+/* A small type lift on the index and project pages. */
+body, .reference-intro, nav a, .sidebar-bottom, .lab-sidebar h2,
+.project-copy h2, .project-copy .journey, .project-links,
+.project-links .text-button, .project-visual .category, .about p,
+.background dt, .mobile-menu nav a, .mobile-menu h2, .mobile-menu-contacts {
+  font-size: 14px;
+}
+.background dd, .contact-links, #slide-links { font-size: 12px; }
+.background h3 { font-size: 11px; }
+.about h2 { font-size: 21px; }
+.lab-heading { font-size: 17px; }
+.mobile-menu-bar, .detail-back, .detail-links { font-size: 13px; }
+.detail-meta { font-size: 12px; }
+.simple-detail h1 { font-size: 24px; }
+.detail-description, .detail-media p, .simple-detail .case-note p,
+.simple-detail .mcp-design figcaption p, .simple-detail .model-context p {
+  font-size: 15px;
+}
+.simple-detail .case-note h2, .simple-detail .mcp-design figcaption h2 { font-size: 17px; }
+.simple-detail .custom-design figcaption h2 { font-size: 16px; }
+.simple-detail .custom-design figcaption p, .simple-detail .eval-intro { font-size: 14px; }
+.simple-detail .detail-design figcaption { font-size: 13px; }
+.simple-detail .eval-graphs h2 { font-size: 20px; }
+.simple-detail .model-context h2 { font-size: 19px; }
+.simple-detail .eval-figure figcaption { font-size: 12px; }
+
+main > footer {
+  min-height: 144px;
+  margin: 0 -20px -20px;
+  padding: 22px 20px;
+  align-items: end;
+  gap: 12px;
+  border-top-color: #34343d;
+  background-color: #08080d;
+  background-image:
+    repeating-linear-gradient(to bottom, transparent 0 4px, rgba(255,255,255,.035) 4px 5px),
+    var(--full-portfolio-gradient);
+  color: #e0e0e5;
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .project-copy h2 { font-size: 16px; }
+  .project-visual .category { font-size: 13px; }
+}
