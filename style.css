@@ -220,3 +220,32 @@ body, .reference-intro, nav a, .sidebar-bottom, .lab-sidebar h2,
   .project-copy h2 { font-size: 16px; }
   .project-visual .category { font-size: 13px; }
 }
+
+/* A feathered light crossing the scan lines from bottom to top. */
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: clamp(90px, 16vh, 180px);
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, rgba(104,174,255,.19) 0 1px, transparent 1px 5px),
+    linear-gradient(to bottom, transparent, rgba(133,192,255,.065) 50%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
+  opacity: 0;
+  animation: blue-scan-light 18s linear infinite;
+  will-change: transform, opacity;
+}
+@keyframes blue-scan-light {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: .75; }
+  82% { opacity: .75; }
+  95%, 100% { transform: translateY(calc(-100vh - 100%)); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; display: none; will-change: auto; }
+}
