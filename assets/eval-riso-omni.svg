@@ -1135,7 +1135,7 @@ C 663.07784 207.913888 662.411445 209.522708 662.411445 211.2
 C 662.411445 212.877292 663.07784 214.486112 664.263864 215.672136 
 C 665.449888 216.85816 667.058708 217.524555 668.736 217.524555 
 z
-" clip-path="url(#pe644331c59)" style="fill: #579dff; stroke: #579dff; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
+" clip-path="url(#pe644331c59)" style="fill: #fff05b; stroke: #fff05b; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
     <path d="M 678.7584 294.324555 
 C 680.435692 294.324555 682.044512 293.65816 683.230536 292.472136 
 C 684.41656 291.286112 685.082955 289.677292 685.082955 288 
@@ -1146,7 +1146,7 @@ C 673.10024 284.713888 672.433845 286.322708 672.433845 288
 C 672.433845 289.677292 673.10024 291.286112 674.286264 292.472136 
 C 675.472288 293.65816 677.081108 294.324555 678.7584 294.324555 
 z
-" clip-path="url(#pe644331c59)" style="fill: #579dff; stroke: #579dff; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
+" clip-path="url(#pe644331c59)" style="fill: #fff05b; stroke: #fff05b; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
     <path d="M 668.736 370.277226 
 C 670.188577 370.277226 671.581856 369.700111 672.608983 368.672983 
 C 673.636111 367.645856 674.213226 366.252577 674.213226 364.8 
@@ -1157,7 +1157,7 @@ C 663.835889 361.954144 663.258774 363.347423 663.258774 364.8
 C 663.258774 366.252577 663.835889 367.645856 664.863017 368.672983 
 C 665.890144 369.700111 667.283423 370.277226 668.736 370.277226 
 z
-" clip-path="url(#pe644331c59)" style="fill: #579dff; stroke: #579dff; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
+" clip-path="url(#pe644331c59)" style="fill: #fff05b; stroke: #fff05b; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
    </g>
    <g id="text_11">
     <!-- 4.0 · both annotators -->
@@ -1296,7 +1296,7 @@ z
 " style="stroke: #ff6a9f"/>
     </defs>
     <g clip-path="url(#pe644331c59)">
-     <use xlink:href="#ma6c1157fcb" x="718.848" y="364.8" style="fill: #ff6a9f; stroke: #ff6a9f; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
+     <use xlink:href="#ma6c1157fcb" x="718.848" y="364.8" style="fill: #a8ff69; stroke: #a8ff69; stroke-width: 1.45" filter="url(#graph-riso-ink)"/>
     </g>
    </g>
   </g>
