@@ -145,10 +145,21 @@ body {
 body::before {
   background: repeating-linear-gradient(to bottom, transparent 0 4px, rgba(0, 0, 0, .055) 4px 5px);
 }
-:root nav a[data-project-nav]:hover,
-:root nav a[data-project-nav][aria-current="location"],
-:root nav a[data-project-nav]:hover span,
-:root nav a[data-project-nav][aria-current="location"] span { color: var(--ink); }
+:root nav a[data-project-nav] {
+  width: fit-content;
+  max-width: calc(100% + 10px);
+  margin-inline-start: -5px;
+  padding-inline: 5px;
+  transition: none;
+}
+:root nav a[data-project-nav]:is(:hover, :focus-visible, [aria-current="location"]) {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+:root nav a[data-project-nav]:is(:hover, :focus-visible, [aria-current="location"]) span {
+  color: inherit;
+}
 :root .project-links a,
 :root .project-links .text-button,
 :root .motion-demo summary,
