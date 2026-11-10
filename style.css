@@ -45,12 +45,12 @@ nav a,nav a span,.project-visual .category{color:var(--muted)}nav a:hover,nav a[
 /* A gentle oscillation of one scan-line interval. */
 body::before{
   inset:-6px 0;
-  animation:scan-line-breathe 10s ease-in-out infinite alternate;
+  animation:scan-line-breathe 6s ease-in-out infinite alternate;
   will-change:transform;
 }
 @keyframes scan-line-breathe{
-  from{transform:translateY(-2px)}
-  to{transform:translateY(2px)}
+  from{transform:translateY(-1.5px);opacity:.88}
+  to{transform:translateY(1.5px);opacity:1}
 }
 @media(prefers-reduced-motion:reduce){
   body::before{animation:none;transform:none;will-change:auto}
