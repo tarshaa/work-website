@@ -28,7 +28,7 @@ main{margin-left:25%;padding:20px;max-width:none}
 
 /* Dark treatment drawn from the main portfolio. */
 :root{color-scheme:dark;--paper:#08080d;--ink:#e0e0e5;--muted:#b5b5bf;--line:#34343d;--accent:#99c9ff}
-body{background-color:#08080d;--full-portfolio-gradient:linear-gradient(to bottom,rgba(193,157,236,.14) 0%,rgba(153,85,240,.17) 20%,rgba(111,0,35,.16) 37%,rgba(9,12,55,.16) 52%,rgba(92,5,34,.14) 64%,rgba(239,73,21,.18) 67%,rgba(193,151,245,.20) 67.3%,rgba(52,11,44,.12) 71%,rgba(0,124,189,.16) 84%,rgba(169,121,225,.15) 100%);background-image:var(--full-portfolio-gradient);background-attachment:fixed;background-repeat:no-repeat;color:var(--ink)}
+body{background-color:#08080d;--full-portfolio-gradient:linear-gradient(to bottom,rgba(193,157,236,.14) 0%,rgba(153,85,240,.17) 20%,rgba(111,0,35,.16) 37%,rgba(9,12,55,.16) 52%,rgba(92,5,34,.14) 64%,rgba(39,99,220,.18) 67%,rgba(193,151,245,.20) 67.3%,rgba(52,11,44,.12) 71%,rgba(0,124,189,.16) 84%,rgba(169,121,225,.15) 100%);background-image:var(--full-portfolio-gradient);background-attachment:fixed;background-repeat:no-repeat;color:var(--ink)}
 body:before{display:block;z-index:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 4px,rgba(255,255,255,.035) 4px,rgba(255,255,255,.035) 5px)}
 .sidebar{background:transparent;z-index:2}main{position:relative;z-index:1}
 .project-links .text-button,.project-links a,.motion-demo summary{color:#99c9ff}
@@ -140,7 +140,7 @@ dialog.mobile-menu{inset:0 0 0 auto;margin:0;width:min(340px,88vw);max-width:non
 }
 body {
   background-color: var(--paper);
-  background-image: linear-gradient(180deg, rgba(153, 85, 240, .038) 0%, rgba(170, 68, 114, .028) 37%, rgba(91, 97, 166, .018) 54%, rgba(239, 133, 86, .033) 69%, rgba(0, 124, 189, .033) 87%, rgba(169, 121, 225, .026) 100%);
+  background-image: linear-gradient(180deg, rgba(153, 85, 240, .038) 0%, rgba(170, 68, 114, .028) 37%, rgba(91, 97, 166, .018) 54%, rgba(39, 99, 220, .033) 69%, rgba(0, 124, 189, .033) 87%, rgba(169, 121, 225, .026) 100%);
   color: var(--ink);
 }
 body::before {
@@ -215,21 +215,6 @@ body, .reference-intro, nav a, .sidebar-bottom, .lab-sidebar h2,
 .simple-detail .eval-graphs h2 { font-size: 20px; }
 .simple-detail .model-context h2 { font-size: 19px; }
 .simple-detail .eval-figure figcaption { font-size: 12px; }
-
-main > footer {
-  min-height: 144px;
-  margin: 0 -20px -20px;
-  padding: 22px 20px;
-  align-items: end;
-  gap: 12px;
-  border-top-color: #34343d;
-  background-color: #08080d;
-  background-image:
-    repeating-linear-gradient(to bottom, transparent 0 4px, rgba(255,255,255,.035) 4px 5px),
-    var(--full-portfolio-gradient);
-  color: #e0e0e5;
-  font-size: 11px;
-}
 
 @media (max-width: 760px) {
   .project-copy h2 { font-size: 16px; }
