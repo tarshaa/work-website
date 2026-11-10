@@ -135,7 +135,8 @@ dialog.mobile-menu{inset:0 0 0 auto;margin:0;width:min(340px,88vw);max-width:non
   --ink: #232326;
   --muted: #55545b;
   --line: #d6d5da;
-  --accent: #303037;
+  --accent: #2455b5;
+  --micro-blue: #2763dc;
 }
 body {
   background-color: var(--paper);
@@ -152,6 +153,7 @@ body::before {
   padding-inline: 5px;
   transition: none;
 }
+:root nav a[data-project-nav] span { color: var(--accent); }
 :root nav a[data-project-nav]:is(:hover, :focus-visible, [aria-current="location"]) {
   background: #000;
   color: #fff;
@@ -173,9 +175,11 @@ body::before {
 :root .project-links .text-button:hover,
 :root .motion-demo summary:hover { color: #000; }
 :root nav a:hover, :root nav a[aria-current] { color: var(--ink); }
-:root .site-micrographics, :root .mobile-menu-toggle { color: var(--muted); }
+:root .site-micrographics, :root .mobile-menu-toggle { color: var(--micro-blue); }
+:root .site-micrographics { opacity: .8; }
 .project-visual .category::after {
-  background: repeating-linear-gradient(to right, currentColor 0 1px, transparent 1px 4px);
+  background: repeating-linear-gradient(to right, var(--micro-blue) 0 1px, transparent 1px 4px);
+  opacity: .85;
 }
 :root .mobile-jump, :root dialog.mobile-menu, :root #slide-dialog {
   background: var(--paper);
