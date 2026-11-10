@@ -220,24 +220,3 @@ body, .reference-intro, nav a, .sidebar-bottom, .lab-sidebar h2,
   .project-copy h2 { font-size: 16px; }
   .project-visual .category { font-size: 13px; }
 }
-
-/* A soft lavender strip sweeps upward through the scan lines. */
-body::after {
-  content: "";
-  position: fixed;
-  z-index: 0;
-  inset: 100% 0 auto;
-  height: clamp(48px, 9vh, 90px);
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent, rgba(169, 132, 232, .24) 50%, transparent);
-  opacity: 0;
-  animation: lavender-sweep 4s linear infinite;
-}
-@keyframes lavender-sweep {
-  0% { transform: translateY(0); opacity: 0; }
-  10%, 82% { opacity: .8; }
-  95%, 100% { transform: translateY(calc(-100vh - 100%)); opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  body::after { display: none; animation: none; }
-}
