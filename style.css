@@ -237,7 +237,7 @@ body::after {
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
   mask-image: linear-gradient(to bottom, transparent, #000 45%, #000 55%, transparent);
   opacity: 0;
-  animation: blue-scan-light 18s linear infinite;
+  animation: blue-scan-light 9s linear infinite;
   will-change: transform, opacity;
 }
 @keyframes blue-scan-light {
