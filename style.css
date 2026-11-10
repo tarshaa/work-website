@@ -221,23 +221,21 @@ body, .reference-intro, nav a, .sidebar-bottom, .lab-sidebar h2,
   .project-visual .category { font-size: 13px; }
 }
 
-/* Registration marks sweep upward across the scan lines. */
+/* A soft lavender strip sweeps upward through the scan lines. */
 body::after {
   content: "";
   position: fixed;
   z-index: 0;
   inset: 100% 0 auto;
-  height: 9px;
+  height: clamp(48px, 9vh, 90px);
   pointer-events: none;
-  background:
-    repeating-linear-gradient(to right, transparent 0 22px, var(--micro-blue) 22px 23px, transparent 23px 48px) center / 100% 9px no-repeat,
-    repeating-linear-gradient(to right, transparent 0 18px, var(--micro-blue) 18px 27px, transparent 27px 48px) center / 100% 1px no-repeat;
+  background: linear-gradient(to bottom, transparent, rgba(169, 132, 232, .24) 50%, transparent);
   opacity: 0;
-  animation: scan-marks 4s linear infinite;
+  animation: lavender-sweep 4s linear infinite;
 }
-@keyframes scan-marks {
+@keyframes lavender-sweep {
   0% { transform: translateY(0); opacity: 0; }
-  10%, 82% { opacity: .38; }
+  10%, 82% { opacity: .8; }
   95%, 100% { transform: translateY(calc(-100vh - 100%)); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
