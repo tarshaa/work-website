@@ -213,7 +213,10 @@ if(selected){
  }
  function card(p) {
    const fauna = p.id === 'fauna-settings';
-   const primary = fauna ? `<div class="fauna-pair">${video('fauna-cover-hd.mp4', 'Fauna model recommendations')}${video(p.video, p.title)}</div>`
+   const coverVideo = p.id === 'motion' ? 'elements-cover.mp4' : null;
+   const coverImage = coverVideo ? null : p.assetImage;
+   const primary = coverVideo ? video(coverVideo, p.title)
+     : fauna ? `<div class="fauna-pair">${video('fauna-cover-hd.mp4', 'Fauna model recommendations')}${video(p.video, p.title)}</div>`
      : p.id === 'physical' ? physicalSpread(p.designs)
      : p.id === 'models' ? `<div class="benchmark-thumbnails">${['omni', 'recraft', 'opus'].map(id => `<img src="assets/eval-riso-${id}.svg?v=neon-14" alt="${id} evaluation graph">`).join('')}</div>`
      : p.animation ? animatedImage(p)
@@ -224,7 +227,7 @@ if(selected){
        <a class="media-link" href="mcp-api.html" aria-label="Open FLORA MCP and API design examples">
          <img src="${mcpArtwork}" alt="FLORA action controls, skills, and editable canvas" width="2304" height="1716" loading="lazy" decoding="async">
        </a>
-     </div>` : `<a class="media-link topic-box ${p.id==='physical'?'physical-spread':''} ${fauna?'fauna-cover':''} ${p.id==='models'?'benchmark-preview':''} ${p.assetImage?'topic-pair':''}" href="${href(p)}" ${p.live?'target="_blank" rel="noopener noreferrer"':''} aria-label="Open ${esc(p.title)}">${primary}${p.assetImage?`<img class="uncropped-image" src="${p.assetImage}" alt="${esc(p.title)} — Elements panel">`:''}</a>`;
+     </div>` : `<a class="media-link topic-box ${p.id==='physical'?'physical-spread':''} ${fauna?'fauna-cover':''} ${p.id==='models'?'benchmark-preview':''} ${coverImage?'topic-pair':''}" href="${href(p)}" ${p.live?'target="_blank" rel="noopener noreferrer"':''} aria-label="Open ${esc(p.title)}">${primary}${coverImage?`<img class="uncropped-image" src="${coverImage}" alt="${esc(p.title)} — Elements panel">`:''}</a>`;
    return `<section class="project-section" id="${p.id}">
      <div class="project-copy"><h2>${projectLink(p, p.title)}</h2><p class="journey">${esc(p.journey || p.focus)}</p><div class="project-links">${projectLink(p, p.live ? 'Explore live' : 'Learn more')}</div></div>
      <div class="project-visual"><p class="category">${esc(p.category)}</p>${preview}</div>
