@@ -218,7 +218,7 @@ if(selected){
    const primary = coverVideo ? video(coverVideo, p.title)
      : fauna ? `<div class="fauna-pair">${video('fauna-cover-hd.mp4', 'Fauna model recommendations')}${video(p.video, p.title)}</div>`
      : p.id === 'physical' ? physicalSpread(p.designs)
-     : p.id === 'models' ? `<div class="benchmark-thumbnails">${['omni', 'recraft', 'opus'].map(id => `<img src="assets/eval-riso-${id}.svg?v=neon-14" alt="${id} evaluation graph">`).join('')}</div>`
+     : p.id === 'models' ? `<div class="benchmark-thumbnails">${['omni', 'recraft', 'opus'].map(id => `<span class="benchmark-stack"><img src="assets/eval-riso-${id}.svg?v=neon-14" alt="${id} evaluation graph"></span>`).join('')}</div>`
      : p.animation ? animatedImage(p)
      : p.video ? video(p.video, p.title)
      : image(p.slide, p.title);

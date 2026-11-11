@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Tarshaa Krishnaraj — product and brand design for AI workflows, interaction systems, and creative tools."><title>Tarshaa Krishnaraj — Product &amp; Brand Designer and Researcher</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=lavender-restored-26"><script src="projects.js?v=physical-hires-25" defer></script><script src="app.js?v=physical-hires-25" defer></script><style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Tarshaa Krishnaraj — product and brand design for AI workflows, interaction systems, and creative tools."><title>Tarshaa Krishnaraj — Product &amp; Brand Designer and Researcher</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=lavender-restored-26"><script src="projects.js?v=physical-hires-25" defer></script><script src="app.js?v=eval-stacks-27" defer></script><style>
   .project-visual .category::after {
     background: repeating-linear-gradient(to right, #2763dc 0 1px, transparent 1px 4px);
     opacity: 1;
@@ -108,6 +108,43 @@
     background: transparent;
   }
   #motion .topic-box > video { height: auto; }
+</style><style>
+  #models .benchmark-thumbnails {
+    --sheet-offset: clamp(4px, .8vw, 11px);
+    --stack-rise: clamp(9px, 1.4vw, 24px);
+    gap: clamp(12px, 2.8vw, 44px);
+    padding: calc(9% + var(--sheet-offset)) calc(2 * var(--sheet-offset)) 8% 0;
+    align-items: start;
+  }
+  .benchmark-stack {
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    transform: skewY(25deg);
+  }
+  .benchmark-stack:first-child { margin-top: calc(2 * var(--stack-rise)); }
+  .benchmark-stack:nth-child(2) { margin-top: var(--stack-rise); }
+  .benchmark-stack::before,
+  .benchmark-stack::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(28, 58, 75, .28);
+  }
+  .benchmark-stack::before {
+    z-index: -2;
+    background: #9ec5da;
+    transform: translate(calc(2 * var(--sheet-offset)), calc(-2 * var(--sheet-offset)));
+  }
+  .benchmark-stack::after {
+    z-index: -1;
+    background: #e9f3f8;
+    transform: translate(var(--sheet-offset), calc(-1 * var(--sheet-offset)));
+  }
+  #models .benchmark-stack img { display: block; border-radius: 0; }
+  @media (max-width: 540px) {
+    .benchmark-stack { transform: skewY(18deg); }
+  }
 </style></head>
 <body><div class="site-micrographics" aria-hidden="true"><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="ticks"></i></div><a class="skip" href="#main">Skip to work</a>
 <aside class="sidebar"><p class="reference-intro"><a href="#top">Tarshaa Krishnaraj</a> is a<br>product &amp; brand designer and researcher.</p><nav id="project-index" aria-label="Project index"></nav><div class="lab-sidebar"><h2>Cook Lab</h2><nav id="lab-index" aria-label="Cook Lab"></nav></div><div class="sidebar-bottom"><a href="#about">About</a><a href="https://x.com/tartartuna" target="_blank" rel="noopener noreferrer">X ↗</a><a href="https://www.linkedin.com/in/tarshaakrishnaraj/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:tarshaakrishnaraj@gmail.com">Email ↗</a></div></aside>
