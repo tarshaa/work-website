@@ -282,36 +282,43 @@ window.PORTFOLIO = [
       },
       {
         "image": "physical-manual.webp",
+        "coverImage": "physical-manual-cover.webp",
         "title": "Operating manual",
         "width": 320
       },
       {
         "image": "physical-creator-packet.webp",
+        "coverImage": "physical-creator-packet-cover.webp",
         "title": "Personal creator packet",
         "width": 170
       },
       {
         "image": "physical-magnets.webp",
+        "coverImage": "physical-magnets-cover.webp",
         "title": "Magnets",
         "width": 165
       },
       {
         "image": "physical-object.webp",
+        "coverImage": "physical-object-cover.webp",
         "title": "Physical object",
         "width": 110
       },
       {
         "image": "physical-sticker.webp",
+        "coverImage": "physical-sticker-cover.webp",
         "title": "Sticker",
         "width": 135
       },
       {
         "image": "physical-evolution.webp",
+        "coverImage": "physical-evolution-cover.webp",
         "title": "Creative evolution spread",
         "width": 340
       },
       {
         "image": "physical-workflow.webp",
+        "coverImage": "physical-workflow-cover.webp",
         "title": "Workflow spread",
         "width": 540
       }

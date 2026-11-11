@@ -208,7 +208,7 @@ if(selected){
    const dimensions=[[716,962],[706,946],[272,203],[264,153],[146,151],[197,136],[732,946],[1434,918]];
    return [designs.slice(0,4),designs.slice(4)].map((row,r)=>{
      const columns=row.map((_,i)=>{const [w,h]=dimensions[r*4+i];return `minmax(0,${w/h}fr)`;}).join(' ');
-     return `<div class="physical-spread-row" style="grid-template-columns:${columns}">${row.map((d,i)=>{const [w,h]=dimensions[r*4+i];return `<img src="assets/${esc(d.image)}" alt="${esc(d.title)}" width="${w}" height="${h}" loading="lazy" decoding="async">`;}).join('')}</div>`;
+     return `<div class="physical-spread-row" style="grid-template-columns:${columns}">${row.map((d,i)=>{const [w,h]=dimensions[r*4+i];return `<img src="assets/${esc(d.coverImage || d.image)}" alt="${esc(d.title)}" width="${w}" height="${h}" loading="lazy" decoding="async">`;}).join('')}</div>`;
    }).join('');
  }
  function card(p) {
