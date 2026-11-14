@@ -144,7 +144,7 @@ body {
   color: var(--ink);
 }
 body::before {
-  background: repeating-linear-gradient(to bottom, transparent 0 4px, rgba(0, 0, 0, .055) 4px 5px);
+  background: repeating-linear-gradient(to bottom, transparent 0 4px, rgba(0, 0, 0, .047) 4px 5px);
 }
 :root nav a[data-project-nav] {
   width: fit-content;
