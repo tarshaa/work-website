@@ -6,6 +6,21 @@ const href=p=>p.live||`${p.id}.html`;
 const projectLink=(p,label)=>p.live?external(label,p.live):`<a href="${href(p)}">${esc(label)} →</a>`;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function video(file,label,controls=false){return `<video class="uncropped-video" ${controls?'controls':''} ${reduced?'':'autoplay'} muted loop playsinline preload="metadata" aria-label="${esc(label)}"><source src="assets/${file}" type="video/mp4"></video>`;}
+const coverDimensions = {
+ 'techniques.mp4': [1256, 720],
+ 'fauna-cover-hd.mp4': [800, 928],
+ 'fauna.mp4': [1440, 806],
+ 'flora-blackfriday-promo.mp4': [1336, 1080],
+ 'elements-cover.mp4': [1280, 800],
+ 'flora-mcp-api.mp4': [1920, 1080],
+ 'creative-context-cli.mp4': [1142, 1080],
+ 'magnolia-assessment.mp4': [1822, 720]
+};
+function coverAnimation(file, label) {
+ const [width, height] = coverDimensions[file];
+ const eager = file === 'techniques.mp4';
+ return `<img class="uncropped-image cover-gif" src="assets/${file.replace(/\.mp4$/, '-loop.gif')}" alt="${esc(label)} animation" width="${width}" height="${height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${eager ? ' fetchpriority="high"' : ''}>`;
+}
 function image(n,label,separate=false){
  const p=projects.find(p=>p.slide===n);
  const regions=n===7?[[.351,.147,.313,.382]]:n===9?[[.225,.17,.325,.285],[.214,.552,.167,.30],[.597,.463,.344,.392]]:n===11?[[.453,.09,.381,.38],[.448,.525,.408,.405]]:n===3?[[.414,.207,.218,.746],[.684,.216,.267,.282],[.677,.739,.26,.18]]:[p?.crop||(n===11?[.443,.084,.414,.86]:[0,0,1,1])];
@@ -215,12 +230,12 @@ if(selected){
    const fauna = p.id === 'fauna-settings';
    const coverVideo = p.id === 'motion' ? 'elements-cover.mp4' : null;
    const coverImage = coverVideo ? null : p.assetImage;
-   const primary = coverVideo ? video(coverVideo, p.title)
-     : fauna ? `<div class="fauna-pair">${video('fauna-cover-hd.mp4', 'Fauna model recommendations')}${video(p.video, p.title)}</div>`
+   const primary = coverVideo ? coverAnimation(coverVideo, p.title)
+     : fauna ? `<div class="fauna-pair">${coverAnimation('fauna-cover-hd.mp4', 'Fauna model recommendations')}${coverAnimation(p.video, p.title)}</div>`
      : p.id === 'physical' ? physicalSpread(p.designs)
      : p.id === 'models' ? `<div class="benchmark-thumbnails">${['omni', 'recraft', 'opus'].map(id => `<img src="assets/eval-riso-${id}.svg?v=neon-14" alt="${id} evaluation graph">`).join('')}</div>`
      : p.animation ? animatedImage(p)
-     : p.video ? video(p.video, p.title)
+     : p.video ? coverAnimation(p.video, p.title)
      : image(p.slide, p.title);
    const preview = p.id === 'landing' ? `<div class="landing-pair">
        <a class="media-link" href="${href(p)}" aria-label="Open FLORA landing page">${primary}</a>
