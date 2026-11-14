@@ -235,7 +235,7 @@ body::after {
 }
 @keyframes lavender-sweep {
   0% { transform: translateY(0); opacity: 0; }
-  10%, 82% { opacity: .8; }
+  10%, 82% { opacity: .55; }
   95%, 100% { transform: translateY(calc(-100vh - 100%)); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
