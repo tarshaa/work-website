@@ -1,0 +1,50 @@
+name: Publish model evaluation GIFs
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-model-eval-gifs.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install media converter
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Download approved Figma animation
+        env:
+          SOURCE_URL: 'https://www.figma.com/blobs/us/download/figma-media-exports-us-production/media_export/30f23d19-997b-49a6-8425-fe6bef3fcadf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWCY65GOSXI%2F20261112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20261112T000000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=20d7072391e79356aeeebf4c7f8bdec66474c096b1d77a7a3b8eae23a45912d1'
+          SOURCE_SHA256: '57148895f9d7dd669e0964dd984b68cc049682e14201c767f2de8492e1e6af95'
+        run: |
+          curl --fail --location --retry 3 "$SOURCE_URL" --output /tmp/model-evals.mp4
+          printf '%s  %s\n' "$SOURCE_SHA256" /tmp/model-evals.mp4 | sha256sum --check -
+      - name: Render sharp looping GIFs and stills
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          from pathlib import Path
+          for model, left in [('omni',0),('recraft',1389),('opus',2778)]:
+              prefix=f'assets/eval-{model}'
+              crop=f'crop=1318:1086:{left}:0:exact=1,scale=1200:988:flags=lanczos'
+              palette=f'/tmp/{model}-palette.png'
+              base=['ffmpeg','-hide_banner','-loglevel','error','-y','-threads','2']
+              subprocess.run(base+['-i','/tmp/model-evals.mp4','-t','6','-vf',f'{crop},fps=20,palettegen=stats_mode=full','-frames:v','1','-update','1',palette],check=True)
+              subprocess.run(base+['-i','/tmp/model-evals.mp4','-i',palette,'-t','6','-filter_complex_threads','2','-filter_complex',f'[0:v]{crop},fps=20[v];[v][1:v]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle','-loop','0','-an',prefix+'-loop-v31.gif'],check=True)
+              subprocess.run(base+['-ss','4.2','-i','/tmp/model-evals.mp4','-vf',crop,'-frames:v','1','-update','1',prefix+'-still-v31.png'],check=True)
+              data=Path(prefix+'-loop-v31.gif').read_bytes()
+              assert int.from_bytes(data[6:8],'little')==1200
+              assert int.from_bytes(data[8:10],'little')==988
+              assert b'NETSCAPE2.0\x03\x01\x00\x00\x00' in data
+              print(model, len(data), 'bytes, 1200 x 988, infinite loop')
+          PY
+      - name: Publish the six approved assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/eval-omni-loop-v31.gif assets/eval-recraft-loop-v31.gif assets/eval-opus-loop-v31.gif assets/eval-omni-still-v31.png assets/eval-recraft-still-v31.png assets/eval-opus-still-v31.png
+          git commit -m "Add high-resolution looping model evaluation GIFs"
+          git push origin HEAD:main
