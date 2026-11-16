@@ -54,6 +54,11 @@ footer a,footer .registration{color:#b7ccff;}
 }
 .index-bottom .lab-index{justify-content:flex-start;align-items:center;gap:10px}.lab-index .index-dot{width:4px;height:4px;min-width:4px;flex:0 0 4px;background:#191919;border-radius:50%}
 
+/* Let the index use more of the open gutter beside the project grid. */
+@media(min-width:761px){.index{width:calc(var(--sidebar) + 24px);}}
+@media(min-width:1101px){.index{width:calc(var(--sidebar) + 48px);}}
+@media(min-width:1700px){.index{width:calc(var(--sidebar) + 64px);}}
+
 /* Keep the sticker collection and book spread complete in a shallower row. */
 #physical .cover,#operating-manual .cover{aspect-ratio:2469/1575;border:0;}
 .cover.physical{background:transparent;}
