@@ -1,0 +1,14 @@
+.cover.interactive-orbs{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);place-items:center;gap:0;padding:4.2% 5.2%;background:#000;touch-action:pan-y}
+.orb-button{display:block;width:70%;aspect-ratio:1;position:relative;border:0;padding:0;border-radius:50%;background:transparent;touch-action:pan-y;-webkit-tap-highlight-color:transparent;cursor:crosshair}
+.orb-button:focus-visible{outline:1px solid #fff;outline-offset:7px}
+.orb-art{position:absolute;inset:0;pointer-events:none;container-type:inline-size}
+.orb-layer,.orb-response{position:absolute;display:block;pointer-events:none}
+.orb-layer{animation-delay:var(--orb-phase,0s)}
+.orb-layer.badge{background:#191919;border:.65cqw solid #343434;border-radius:50%;box-shadow:inset 0 0 10cqw rgba(0,0,0,.2)}
+.orb-layer.grid{background:#3b3b3b;border:0;border-radius:1.5cqw}
+.orb-layer.light{background:#f5f5f2;border-radius:1.5cqw;box-shadow:0 0 1.6cqw rgba(255,255,255,.5),0 0 4.3cqw rgba(255,255,255,.18)}
+.cover.interactive-orbs .orb-layer.badge img,.orb-layer.pencil{display:none}
+.cover.interactive-orbs .orb-layer img{display:block;width:100%;height:100%;object-fit:fill;border-radius:0;filter:none;transition:none}
+.orb-response{background:#fff;border-radius:1.5cqw;box-shadow:0 0 2cqw rgba(255,255,255,.5),0 0 5cqw rgba(255,255,255,.2);opacity:0;transition:opacity .18s ease-out;mix-blend-mode:screen}
+.interactive-orbs.is-paused .orb-layer{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.orb-layer{animation:none!important}.orb-response{transition:none}}

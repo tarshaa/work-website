@@ -58,7 +58,7 @@ window.PORTFOLIO = [
     "date": "2025–2026",
     "role": "Product design · model evaluation",
     "category": "Model evaluation, decision support",
-    "journey": "I translate model behavior into creative workflow guidance through authored reviews, alongside product surfaces that make shared team usage visible.",
+    "journey": "Evaluation methods and model studies covering instruction adherence, reference preservation, temporal consistency and reporting quality.",
     "focus": "Giving people context for model choice and shared usage.",
     "steps": [
       "Understand team usage",
@@ -309,20 +309,45 @@ window.PORTFOLIO = [
         "coverImage": "physical-sticker-cover.webp",
         "title": "Sticker",
         "width": 135
-      },
-      {
-        "image": "physical-evolution.webp",
-        "coverImage": "physical-evolution-cover.webp",
-        "title": "Creative evolution spread",
-        "width": 340
-      },
-      {
-        "image": "physical-workflow.webp",
-        "coverImage": "physical-workflow-cover.webp",
-        "title": "Workflow spread",
-        "width": 540
       }
     ]
+  },
+  {
+    "id": "operating-manual",
+    "title": "Operating Manual & Field Guide for the Generative Era",
+    "company": "FLORA",
+    "role": "Editorial design · Print",
+    "category": "Editorial design, creative practice",
+    "asset": "operating-manual-field-guide.png",
+    "summary": "Printed guides exploring how generative tools are changing creative practice.",
+    "journey": "The Operating Manual and Field Guide bring generative practice into print. Essays, storyboards, and workflow diagrams show how creative intent becomes a sequence of decisions: choosing references, shaping outputs, reviewing results, and developing a repeatable process.",
+    "designs": [
+      {
+        "image": "operating-manual-field-guide.png",
+        "title": "The Mechanics of Meaning",
+        "copy": "An editorial spread pairing Anna Gorham’s essay with a visual study. The wide title, illustration, and two-column text establish a clear sequence across the facing pages.",
+        "width": 1400
+      },
+      {
+        "image": "field-guide-regenesis-spread.png",
+        "title": "Tracing an idea through a sequence",
+        "copy": "Michelle Manxue Ma’s REGENESIS storyboard follows a strawberry motif through genesis, enclosure, release, and regeneration. Presenting the frames together makes the progression visible: an idea develops through composition, scale, material, and transition, with each image contributing to the larger sequence.",
+        "width": 1400
+      },
+      {
+        "image": "field-guide-creative-access-spread.png",
+        "title": "Creative access and authorship",
+        "copy": "This contribution by Maxim Leyzerovich pairs a speculative system-policy report with images about access to creative tools. The spread places questions of agency and expression alongside the work, inviting readers to consider who can create and how a tool shapes that possibility.",
+        "width": 1400
+      },
+      {
+        "image": "operating-manual-workflow-spread.png",
+        "title": "From experimentation to a repeatable workflow",
+        "copy": "The Operating Manual describes experimentation, systematization, and platformization as stages in creative practice. The accompanying canvas follows a product sketch through analysis, rendering, and campaign imagery, showing the intermediate steps that a finished image often conceals.",
+        "width": 1000
+      }
+    ],
+    "links": []
   },
   {
     "id": "mcp-api",

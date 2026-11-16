@@ -1,0 +1,26 @@
+[
+  {
+    "path": "assets/image-editor-loop-1080.gif",
+    "parts": [
+      "media-parts/image-editor-loop-1080.gif.part00",
+      "media-parts/image-editor-loop-1080.gif.part01"
+    ],
+    "sha256": "117ef1e8e0dcd30ddf26f1c2eb0a7c3e3437a1e7807c58c925392f97f4affff1"
+  },
+  {
+    "path": "assets/creative-directions-loop-1080.gif",
+    "parts": [
+      "media-parts/creative-directions-loop-1080.gif.part00",
+      "media-parts/creative-directions-loop-1080.gif.part01"
+    ],
+    "sha256": "157fe92368554df0f1c17028bdf94ffddb6b69fa6d4cd17b85f220a965a85032"
+  },
+  {
+    "path": "assets/flora-mcp-api-loop.gif",
+    "parts": [
+      "media-parts/flora-mcp-api-loop.gif.part00",
+      "media-parts/flora-mcp-api-loop.gif.part01"
+    ],
+    "sha256": "2816e8e6af350a3b707964ae0baedf996bd8e85564efe764980312e0052847a4"
+  }
+]

@@ -1,0 +1,13 @@
+@font-face{font-family:"Roboto Mono";src:url("fonts/RobotoMono-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Roboto Mono";src:url("fonts/RobotoMono-Medium.woff2") format("woff2");font-style:normal;font-weight:500 800;font-display:swap}
+:root{--sans:"Gellix",Arial,sans-serif;--mono:"Roboto Mono",monospace;font-family:var(--sans)}
+body,button,input,select,textarea{font-family:var(--sans)}
+.card-meta,.eyebrow,.case-label,.detail-meta,figcaption,.visual-caption,.preview-label,footer{font-family:var(--mono)}
+.card-meta{letter-spacing:0;font-size:9px}
+#project-nav{gap:2px}
+#project-nav a{font-size:15px;line-height:1.4;padding-block:2px}
+#project-nav a{transition:background-color .32s cubic-bezier(.22,1,.36,1),color .32s cubic-bezier(.22,1,.36,1)}
+#project-nav .index-dot,.lab-index .index-dot{transition:background-color .32s cubic-bezier(.22,1,.36,1)}
+#project-nav .index-dot,.lab-index .index-dot{width:5px;height:5px;min-width:5px;flex-basis:5px;border-radius:0;background:#191919}
+#project-nav a:hover .index-dot,#project-nav a[aria-current="location"] .index-dot,.lab-index:hover .index-dot{background:var(--blue)}
+@media(min-width:1700px){#project-nav a{font-size:16px}}

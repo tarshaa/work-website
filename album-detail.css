@@ -1,0 +1,1 @@
+@font-face{font-family:"Album Sans";src:url("fonts/AlbumSansTrial-Regular.otf") format("opentype");font-weight:400;font-display:swap}:root{--sans:"Album Sans",Arial,sans-serif;--mono:"Album Sans",Arial,sans-serif}body,button,select,input{font-family:"Album Sans",Arial,sans-serif}
