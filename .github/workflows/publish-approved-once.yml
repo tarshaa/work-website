@@ -1,0 +1,63 @@
+name: Publish approved portfolio once
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/publish-approved-once.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: approved-portfolio-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify approved site
+        env:
+          BUNDLE_BASE: https://discount-approximately-senior-boats.trycloudflare.com/bede2ebce19de145f9a587b8dc7acd4f
+        run: |
+          python3 - <<'PY'
+          import os, urllib.request, hashlib, json, pathlib, concurrent.futures, time, tarfile
+          base = os.environ['BUNDLE_BASE']
+          root = pathlib.Path('/tmp/approved-transfer')
+          root.mkdir()
+          def download(name):
+              for attempt in range(5):
+                  try:
+                      with urllib.request.urlopen(base + '/' + name, timeout=180) as r:
+                          return r.read()
+                  except Exception:
+                      if attempt == 4: raise
+                      time.sleep(3 * (attempt + 1))
+          raw = download('manifest.json')
+          assert hashlib.sha256(raw).hexdigest() == '8a5392d6ba52ee487fc448eae65caf2a5a2dec61860cd3ffbabf58e425625d3d'
+          manifest = json.loads(raw)
+          def part(entry):
+              data = download(entry['name'])
+              assert hashlib.sha256(data).hexdigest() == entry['sha256']
+              (root / entry['name']).write_bytes(data)
+              print('Verified', entry['name'], flush=True)
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              list(pool.map(part, manifest['parts']))
+          bundle = root / 'site.tar.gz'
+          with bundle.open('wb') as out:
+              for entry in manifest['parts']: out.write((root / entry['name']).read_bytes())
+          assert hashlib.sha256(bundle.read_bytes()).hexdigest() == manifest['bundle_sha256']
+          site = root / 'site'
+          site.mkdir()
+          with tarfile.open(bundle) as t: t.extractall(site, filter='data')
+          files = [str(p.relative_to(site)) for p in site.rglob('*') if p.is_file()]
+          (site / 'site-files.json').write_text(json.dumps(sorted(files), indent=2) + '\n')
+          PY
+          rsync -a /tmp/approved-transfer/site/ ./
+      - name: Commit approved site and remove temporary publishing job
+        run: |
+          rm .github/workflows/publish-approved-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "Publish approved two-column portfolio with high-resolution media and Field Guide"
+          git push origin HEAD:main
