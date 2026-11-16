@@ -9,10 +9,11 @@
   const visibleLayers = data.layers.filter(l => !l.name.startsWith('Pencil/'));
   grid.innerHTML = data.tracks.map((tracks, i) => `<button type="button" class="orb-button" style="--orb-phase:${-i*.31}s" aria-label="Fauna orb ${i+1}. Move over it or activate to send a ripple."><span class="orb-art" aria-hidden="true">${visibleLayers.map(l => `<span class="orb-layer ${l.name.split('/')[0].toLowerCase()} ${tracks[l.name] || ''}" style="${position(l)}opacity:${l.opacity}"></span>`).join('')}${cells.map(l => `<span class="orb-response" style="${position(l)}"></span>`).join('')}</span></button>`).join('');
   let visible = false;
-  const updatePlayback = () => grid.classList.toggle('is-paused', !visible || document.hidden || reduced.matches);
+  const updatePlayback = () => grid.classList.toggle('is-paused', !visible || document.hidden || document.documentElement.classList.contains('motion-paused'));
   const observer = new IntersectionObserver(entries => {visible = entries[0].isIntersecting;updatePlayback();}, {rootMargin:'100px'});
   observer.observe(grid);
   document.addEventListener('visibilitychange', updatePlayback);
+  document.addEventListener('portfolio-motion-change',updatePlayback);
   reduced.addEventListener('change', updatePlayback);
   grid.querySelectorAll('.orb-button').forEach(button => {
     const responses = [...button.querySelectorAll('.orb-response')];

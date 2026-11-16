@@ -22,5 +22,18 @@
       "media-parts/flora-mcp-api-loop.gif.part01"
     ],
     "sha256": "2816e8e6af350a3b707964ae0baedf996bd8e85564efe764980312e0052847a4"
+  },
+  {
+    "path": "assets/field-guide-book-film.mp4",
+    "parts": [
+      "media-parts/field-guide-book-film.mp4.part00",
+      "media-parts/field-guide-book-film.mp4.part01",
+      "media-parts/field-guide-book-film.mp4.part02",
+      "media-parts/field-guide-book-film.mp4.part03",
+      "media-parts/field-guide-book-film.mp4.part04",
+      "media-parts/field-guide-book-film.mp4.part05",
+      "media-parts/field-guide-book-film.mp4.part06"
+    ],
+    "sha256": "b266a41752f36db39b14e93258cb077190ecf7835fd9fad0dfdfa5fecb789883"
   }
 ]

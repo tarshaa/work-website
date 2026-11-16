@@ -318,24 +318,24 @@ window.PORTFOLIO = [
     "company": "FLORA",
     "role": "Editorial design · Print",
     "category": "Editorial design, creative practice",
-    "asset": "operating-manual-field-guide.png",
+    "asset": "operating-manual-field-guide.webp",
     "summary": "Printed guides exploring how generative tools are changing creative practice.",
     "journey": "The Operating Manual and Field Guide bring generative practice into print. Essays, storyboards, and workflow diagrams show how creative intent becomes a sequence of decisions: choosing references, shaping outputs, reviewing results, and developing a repeatable process.",
     "designs": [
       {
-        "image": "operating-manual-field-guide.png",
+        "image": "operating-manual-field-guide.webp",
         "title": "The Mechanics of Meaning",
         "copy": "An editorial spread pairing Anna Gorham’s essay with a visual study. The wide title, illustration, and two-column text establish a clear sequence across the facing pages.",
         "width": 1400
       },
       {
-        "image": "field-guide-regenesis-spread.png",
+        "image": "field-guide-regenesis-spread.webp",
         "title": "Tracing an idea through a sequence",
         "copy": "Michelle Manxue Ma’s REGENESIS storyboard follows a strawberry motif through genesis, enclosure, release, and regeneration. Presenting the frames together makes the progression visible: an idea develops through composition, scale, material, and transition, with each image contributing to the larger sequence.",
         "width": 1400
       },
       {
-        "image": "field-guide-creative-access-spread.png",
+        "image": "field-guide-creative-access-spread.webp",
         "title": "Creative access and authorship",
         "copy": "This contribution by Maxim Leyzerovich pairs a speculative system-policy report with images about access to creative tools. The spread places questions of agency and expression alongside the work, inviting readers to consider who can create and how a tool shapes that possibility.",
         "width": 1400
