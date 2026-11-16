@@ -21,7 +21,7 @@ const copy={
 };
 const newMotion=[
  {id:'image-editor',title:'Image Editor',role:'Motion design · Product marketing',category:'FLORA',summary:'Showing how compositing, inpainting, and image editing work directly on the FLORA canvas.',newMotion:true,pair:'Motion study / 01',asset:'image-editor-loop-1080.gif'},
- {id:'creative-directions',title:'Twenty creative directions',role:'Product marketing · Agent behavior',category:'FLORA',summary:'Demonstrating how an agent develops one brief into multiple creative directions, with outputs people can compare and refine.',newMotion:true,pair:'Motion study / 02',asset:'creative-directions-loop-1080.gif'}
+ {id:'creative-directions',title:'Product marketing',role:'Product marketing · Agent behavior',category:'FLORA',summary:'Demonstrating how an agent develops one brief into multiple creative directions, with outputs people can compare and refine.',newMotion:true,pair:'Motion study / 02',asset:'creative-directions-loop-1080.gif'}
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
