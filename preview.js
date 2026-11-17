@@ -21,7 +21,7 @@ const copy={
 };
 const newMotion=[
  {id:'image-editor',title:'Image Editor',role:'Motion design · Product marketing',category:'FLORA',summary:'Showing how compositing, inpainting, and image editing work directly on the FLORA canvas.',newMotion:true,pair:'Motion study / 01',asset:'image-editor-loop-1080.gif'},
- {id:'creative-directions',title:'Product marketing',role:'Motion design · Product marketing',category:'FLORA',summary:'Showing how Technique Builder turns a canvas workflow into a reusable tool that others can run.',newMotion:true,pair:'Motion study / 02',asset:'technique-builder-loop-4k.gif'}
+ {id:'creative-directions',title:'Product marketing',role:'Motion design · Interface design',category:'FLORA',summary:'Showing how Technique Builder turns a canvas workflow into a reusable tool that others can run.',newMotion:true,pair:'Motion study / 02',asset:'technique-builder-loop-4k.gif'}
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
