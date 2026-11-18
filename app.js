@@ -120,8 +120,8 @@ const caseNotes = {
     ["Keep feedback close to the work","Canvas microinteractions show what the system is doing while a generation is underway. I designed the working states to stay close to the relevant object so users can follow progress without losing their place."]
   ],
   "feature-demos": [
-    ["Teach one action at a time","I made short demos for editing tools and shortcuts. Each clip centers on a single action and its visible result, so the viewer can connect a gesture or command to what changes on the canvas."],
-    ["Show the feature in context","The zoom-to-fit demo is a good example. The viewer sees the starting canvas, the action, and the new framing in sequence, which makes it easier to recognize when the shortcut would help in their own work."]
+    ["Canvas navigation","The shortcuts panel groups commands by task, so creators can find controls for panning, zooming, and reframing the canvas."],
+    ["Workspace collaboration","Comments sit alongside the work they refer to. Sharing controls show each collaborator’s access level, and the team credit panel surfaces usage and the remaining balance."]
   ],
   "physical": [
     ["Carry the visual language into print","I extended FLORA’s brand into an operating manual, field guides, and smaller physical objects. The printed pieces gave me room to turn ideas about creative workflows into pages people could browse at their own pace."],

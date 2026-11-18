@@ -12,7 +12,7 @@ const copy={
   'fauna-settings':'Designing how Fauna interprets a request, communicates progress, and keeps people in control.',
   landing:'Creative examples and a clear first step into the FLORA canvas.',
   motion:'Reusable references, generation states, and feedback close to the work.',
-  'feature-demos':'Focused product demos that make everyday tools easier to discover.',
+  'feature-demos':'Canvas navigation, collaboration, and workspace controls for creative teams.',
   physical:'Field guides, printed matter, and objects that take FLORA beyond the screen.',
   'mcp-api':'Extending FLORA’s visual language into developer tools and connected workflows.',
   fundraise:'Scripting, filming, and editing the story of FLORA’s Series A.',
@@ -52,7 +52,7 @@ function cover(p,n){
  if(p.id==='models')return loopVideo('assets/eval-omni-loop-hd-v33.gif','Omni model evaluations: animated strengths and weaknesses',true,'width="2392" height="1968"');
  if(p.id==='mcp-api')return '<img src="assets/fauna-pattern-grid-poster.webp" alt="Six monochrome Fauna orbs">';
  if(p.id==='physical')return '<img src="assets/physical-sticker-pack-figma.webp" alt="FLORA sticker pack with controller, ticket, screen, booklet, tag, and illustrated designs" width="2469" height="1575" loading="lazy" decoding="async">';
- if(p.id==='feature-demos')return '<img src="assets/features-zoom-original.webp" alt="FLORA Zoom to fit keyboard shortcut and navigation tools" width="3390" height="1966" loading="lazy" decoding="async">';
+ if(p.id==='feature-demos')return '<img src="assets/features-product-design.png" alt="FLORA canvas with collaborator comments, sharing permissions, team credits, and a keyboard shortcut panel" width="1498" height="723" loading="lazy" decoding="async">';
  let src='assets/'+(p.asset||assets[p.id]);
  const alt=p.newMotion?p.title+' motion study':p.title+' project cover';
  return src.endsWith('.gif') ? loopVideo(src,alt,n<2&&!p.lab) : `<img src="${src}" alt="${esc(alt)}" loading="lazy" decoding="async">`;
