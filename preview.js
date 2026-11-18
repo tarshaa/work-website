@@ -80,9 +80,7 @@ document.querySelectorAll('#work .project-card').forEach(card=>observer.observe(
 
 // Start automatically near the viewport. Offscreen covers never compete for downloads.
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
-const motionToggle=document.querySelector('[data-motion-toggle]');
 let motionPaused=reducedMotion.matches;
-try { motionPaused=motionPaused||sessionStorage.getItem('portfolio-motion-paused')==='true'; } catch {}
 const coverLoops=[...document.querySelectorAll('.cover video')];
 function refreshPlayback(){
  coverLoops.forEach(video=>{
@@ -95,8 +93,6 @@ function refreshPlayback(){
 }
 function updateMotion(){
  document.documentElement.classList.toggle('motion-paused',motionPaused);
- motionToggle.textContent=motionPaused?'Play animations':'Pause animations';
- motionToggle.setAttribute('aria-pressed',String(motionPaused));
  refreshPlayback();
  document.dispatchEvent(new CustomEvent('portfolio-motion-change',{detail:{paused:motionPaused}}));
 }
@@ -105,11 +101,6 @@ const playback=new IntersectionObserver(entries=>{
  refreshPlayback();
 },{rootMargin:'120px 0px'});
 coverLoops.forEach(video=>playback.observe(video));
-motionToggle.addEventListener('click',()=>{
- motionPaused=!motionPaused;
- try{sessionStorage.setItem('portfolio-motion-paused',String(motionPaused));}catch{}
- updateMotion();
-});
 reducedMotion.addEventListener('change',()=>{motionPaused=reducedMotion.matches;updateMotion();});
 document.addEventListener('visibilitychange',refreshPlayback);
 updateMotion();
