@@ -221,7 +221,7 @@ window.PORTFOLIO = [
     "title": "Features",
     "company": "FLORA",
     "date": "2025–2026",
-    "role": "Product design",
+    "role": "Content Design",
     "category": "Canvas navigation and team collaboration",
     "journey": "This work brings canvas shortcuts, comments, sharing permissions, and team credits into FLORA’s collaborative workspace.",
     "focus": "Keep frequent actions easy to find and workspace information easy to read.",
