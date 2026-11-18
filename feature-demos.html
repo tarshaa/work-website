@@ -1,1 +1,87 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="./"><title>Features | Tarshaa Krishnaraj</title><link rel="stylesheet" href="style.css?v=published-20261116-2"><link rel="icon" href="icon.svg"><script src="projects.js?v=features-content-design" defer></script><script src="app.js?v=features-product-design" defer></script><link rel="stylesheet" href="gellix-detail.css?v=published-20261116-2"><link rel="stylesheet" href="gellix-fonts.css?v=published-20261116-2"><link rel="stylesheet" href="roboto-mono.css?v=published-20261116-2"></head><body data-project="feature-demos"><div class="site-micrographics" aria-hidden="true"><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="ticks"></i></div><main id="main" class="simple-detail"></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features | Tarshaa Krishnaraj</title>
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css?v=published-20261116-2">
+  <link rel="stylesheet" href="gellix-detail.css?v=published-20261116-2">
+  <link rel="stylesheet" href="gellix-fonts.css?v=published-20261116-2">
+  <link rel="stylesheet" href="roboto-mono.css?v=published-20261116-2">
+  <style>
+    main.features-detail { width: min(1160px, 100%); }
+    .feature-pieces {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 44px 24px;
+      margin-top: 32px;
+    }
+    .feature-pieces figure { min-width: 0; margin: 0; }
+    .feature-piece-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 16 / 10;
+      background: #080909;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .feature-piece-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .feature-pieces figcaption { padding-top: 14px; }
+    .feature-pieces h2 { display: flex; align-items: center; gap: 9px; font-size: 18px; font-weight: 500; }
+    .feature-pieces h2 span { color: var(--blue, #245edb); }
+    .feature-pieces p { margin-top: 6px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    @media (max-width: 680px) {
+      .feature-pieces { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-micrographics" aria-hidden="true"><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="ticks"></i></div>
+  <main class="simple-detail features-detail">
+    <a class="detail-back" href="./#feature-demos">← Back to work</a>
+    <h1>Features</h1>
+    <p class="detail-meta">Content Design · 2025–2026</p>
+    <p class="detail-description">I designed these pieces to show how creative teams navigate and work together in FLORA.</p>
+    <section class="feature-pieces" aria-label="FLORA feature content">
+      <figure>
+        <div class="feature-piece-image">
+          <img src="assets/features-canvas-comments.webp" width="726" height="736" alt="A comment requesting another model sits beside the image on a shared canvas" decoding="async">
+        </div>
+        <figcaption>
+          <h2><span aria-hidden="true">+</span> Canvas comments</h2>
+          <p>I used a request to try a different model to show how feedback stays with the image being reviewed.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="feature-piece-image">
+          <img src="assets/features-sharing-permissions.webp" width="626" height="500" alt="A sharing menu lists collaborators with Admin, Editor, and Viewer access" decoding="async">
+        </div>
+        <figcaption>
+          <h2><span aria-hidden="true">+</span> Sharing permissions</h2>
+          <p>I showed the three access levels together so teams can see who can administer, edit, or view a project.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="feature-piece-image">
+          <img src="assets/features-team-credits.webp" width="1192" height="658" alt="The Team Pool panel shows usage, remaining credits, and the reset date" loading="lazy" decoding="async">
+        </div>
+        <figcaption>
+          <h2><span aria-hidden="true">+</span> Team credits</h2>
+          <p>I highlighted the remaining balance and reset date so teams can see what they have left before starting more work.</p>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="feature-piece-image">
+          <img src="assets/features-keyboard-shortcuts.webp" width="2042" height="582" alt="The Navigation tab lists shortcuts for panning, zooming, and fitting the canvas to view" loading="lazy" decoding="async">
+        </div>
+        <figcaption>
+          <h2><span aria-hidden="true">+</span> Canvas shortcuts</h2>
+          <p>I focused on navigation commands such as Zoom to fit, which is especially useful when a canvas grows beyond the visible area.</p>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
