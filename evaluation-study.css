@@ -14,3 +14,12 @@ body[data-project="models"] .eval-figure figcaption{display:grid;gap:5px;font-fa
 .eval-lightbox-media img,.eval-lightbox-media video{display:block;width:100%;height:auto}
 .eval-lightbox>a{display:inline-block;margin-top:14px;color:#2763dc;font-size:13px}
 @media(max-width:760px){body[data-project="models"] main.simple-detail#main{padding:28px 20px 48px}body[data-project="models"] .eval-gallery{gap:32px}.eval-lightbox{width:calc(100vw - 16px);padding:10px}}
+
+/* Keep the full Recraft study while trimming its separate footer strip. */
+body[data-project="models"] #eval-board-4 .eval-open img,
+.eval-lightbox[data-board="4"] .eval-lightbox-media img {
+  aspect-ratio: 3200 / 2368;
+  object-fit: cover;
+  object-position: top;
+}
+.eval-lightbox[data-board="4"] > [data-eval-original] { display: none; }
