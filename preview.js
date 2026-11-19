@@ -7,17 +7,20 @@ const assets={
   film:'magnolia-assessment-loop.gif','creative-context-cli':'creative-context-cli-loop.gif'
 };
 const copy={
-  techniques:'Making complex creative workflows easy to discover, set up, and run.',
-  models:'Model behavior translated into visual studies and practical creative guidance.',
-  'fauna-settings':'Designing how Fauna interprets a request, communicates progress, and keeps people in control.',
-  landing:'Creative examples and a clear first step into the FLORA canvas.',
-  motion:'Reusable references, generation states, and feedback close to the work.',
-  'feature-demos':'Canvas navigation, collaboration, and workspace controls for creative teams.',
-  physical:'Field guides, printed matter, and objects that take FLORA beyond the screen.',
-  'mcp-api':'Extending FLORA’s visual language into developer tools and connected workflows.',
-  fundraise:'Scripting, filming, and editing the story of FLORA’s Series A.',
-  film:'Brand and trailer work across five films, shaped through pacing and visual detail.',
-  'creative-context-cli':'Pinterest references synced locally and searchable by mood, aesthetic, and pattern.'
+  "techniques": "Find and run a reusable workflow without rebuilding it.",
+  "models": "Choose a model based on what it handles well in real workflows.",
+  "fauna-settings": "See what an agent is doing and decide how it should proceed.",
+  "landing": "Understand what FLORA does and where to start.",
+  "motion": "Reuse visual references and see when a generation is ready.",
+  "feature-demos": "Find shortcuts, share feedback, and understand team controls.",
+  "image-editor": "Refine part of an image without leaving the canvas.",
+  "creative-directions": "Turn a canvas workflow into a tool others can run.",
+  "physical": "Bring FLORA’s visual identity into print and physical objects.",
+  "operating-manual": "Give creative teams a practical guide to generative tools.",
+  "mcp-api": "Use FLORA tools from your own agent or workflow.",
+  "fundraise": "Explain what the Series A means for FLORA and its users.",
+  "film": "Give audiences a feel for each film before they watch.",
+  "creative-context-cli": "Find visual references without digging through saved boards."
 };
 const newMotion=[
  {id:'image-editor',title:'Image Editor',role:'Motion design · Product marketing',category:'FLORA',summary:'Showing how compositing, inpainting, and image editing work directly on the FLORA canvas.',newMotion:true,pair:'Motion study / 01',asset:'image-editor-loop-1080.gif'},
@@ -25,7 +28,7 @@ const newMotion=[
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
-if(fauna){fauna.title='Fauna — designing agent behavior';fauna.role='Product design · Agent behavior';}
+if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Product design · Agent behavior';}
 work.splice(6,0,...newMotion);
 const lab=window.PORTFOLIO.filter(p=>p.lab);
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -49,7 +52,7 @@ function loopVideo(src, alt, eager=false, dimensions='') {
 function cover(p,n){
  if(p.id==='operating-manual')return '<img src="assets/operating-manual-field-guide.webp" alt="The Mechanics of Meaning book spread on a green surface" width="3824" height="2144" loading="lazy" decoding="async">';
  if(p.id==='fauna-settings')return loopVideo('assets/fauna-cover-large-4k-loop.gif','Fauna agent behavior: prompt, thinking, and output',false,'width="3840" height="2880"');
- if(p.id==='models')return loopVideo('assets/eval-omni-loop-hd-v33.gif','Omni model evaluations: animated strengths and weaknesses',true,'width="2392" height="1968"');
+ if(p.id==='models')return '<img src="assets/eval-cover-omni-references.png" alt="Omni turns three references, a person, a shoe, and a setting, into one video. Both reviewers rated this example 4 out of 5." width="1200" height="900" decoding="async" fetchpriority="high">';
  if(p.id==='mcp-api')return '<img src="assets/fauna-pattern-grid-poster.webp" alt="Six monochrome Fauna orbs">';
  if(p.id==='physical')return '<img src="assets/physical-sticker-pack-updated.webp" alt="FLORA sticker pack with controller, ticket, screen, booklet, tag, and illustrated designs" width="2469" height="1575" loading="lazy" decoding="async">';
  if(p.id==='feature-demos')return '<img src="assets/features-product-design.png" alt="FLORA canvas with collaborator comments, sharing permissions, team credits, and a keyboard shortcut panel" width="1498" height="723" loading="lazy" decoding="async">';
@@ -69,7 +72,7 @@ function card(p,n){
  <${coverTag} class="cover ${interactive?'interactive-orbs':''} ${p.newMotion?'motion-piece':''} ${p.id==='models'?'model-evals':''} ${p.id==='fauna-settings'?'fauna':''} ${p.id==='physical'?'physical':''} ${p.id==='feature-demos'?'feature':''}" ${coverAttrs}>${cover(p,n)}</${coverTag}>
  <div class="card-meta"><span class="tiny-cross" aria-hidden="true"></span><span class="count">${count}</span>${!p.lab&&p.id!=='film'?'<span class="client-name">FLORA</span>':''}<span>${esc(p.lab?'Cook Lab · Build':p.role)}</span></div>
  <div class="card-title"><h2>${standalone?esc(p.title):`<a class="title-link" href="${href}" ${action}>${esc(p.title)}</a>`}</h2>${standalone?'':`<a class="arrow-link" href="${href}" ${action} aria-label="Explore ${esc(p.title)}">${arrow}</a>`}</div>
- <p class="card-summary">${esc(p.summary||copy[p.id])}</p></article>`;
+ <p class="card-summary">${esc(copy[p.id]||p.summary)}</p></article>`;
 }
 document.querySelector('#work').innerHTML=work.map(card).join('');
 document.querySelector('#lab-projects').innerHTML=lab.map(card).join('');
