@@ -8,7 +8,7 @@ const assets={
 };
 const copy={
   "techniques": "Find and run a reusable workflow without rebuilding it.",
-  "models": "Choose a model based on what it handles well in real workflows.",
+  models:'Model behavior translated into visual studies and practical creative guidance.',
   "fauna-settings": "See what an agent is doing and decide how it should proceed.",
   "landing": "Understand what FLORA does and where to start.",
   "motion": "Reuse visual references and see when a generation is ready.",
@@ -52,7 +52,7 @@ function loopVideo(src, alt, eager=false, dimensions='') {
 function cover(p,n){
  if(p.id==='operating-manual')return '<img src="assets/operating-manual-field-guide.webp" alt="The Mechanics of Meaning book spread on a green surface" width="3824" height="2144" loading="lazy" decoding="async">';
  if(p.id==='fauna-settings')return loopVideo('assets/fauna-cover-large-4k-loop.gif','Fauna agent behavior: prompt, thinking, and output',false,'width="3840" height="2880"');
- if(p.id==='models')return '<img src="assets/eval-cover-omni-references.png" alt="Omni turns three references, a person, a shoe, and a setting, into one video. Both reviewers rated this example 4 out of 5." width="1200" height="900" decoding="async" fetchpriority="high">';
+ if(p.id==='models')return loopVideo('assets/eval-omni-loop-hd-v33.gif','Omni model evaluations: animated strengths and weaknesses',true,'width="2392" height="1968"');
  if(p.id==='mcp-api')return '<img src="assets/fauna-pattern-grid-poster.webp" alt="Six monochrome Fauna orbs">';
  if(p.id==='physical')return '<img src="assets/physical-sticker-pack-updated.webp" alt="FLORA sticker pack with controller, ticket, screen, booklet, tag, and illustrated designs" width="2469" height="1575" loading="lazy" decoding="async">';
  if(p.id==='feature-demos')return '<img src="assets/features-product-design.png" alt="FLORA canvas with collaborator comments, sharing permissions, team credits, and a keyboard shortcut panel" width="1498" height="723" loading="lazy" decoding="async">';
