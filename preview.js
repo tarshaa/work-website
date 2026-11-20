@@ -55,7 +55,7 @@ function loopVideo(src, alt, eager=false, dimensions='') {
  return `<video class="cover-loop" data-video-src="assets/${coverVideos[filename]}" poster="${poster}" aria-label="${esc(alt)}" ${dimensions} muted autoplay loop playsinline preload="none" disablepictureinpicture></video>`;
 }
 function cover(p,n){
- if(p.id==='operating-manual')return '<img src="assets/operating-manual-field-guide.webp" alt="The Mechanics of Meaning book spread on a green surface" width="3824" height="2144" loading="lazy" decoding="async">';
+ if(p.id==='operating-manual')return '<img src="assets/field-guide-machines-cover.webp" alt="The Machines We Believe In, an open Field Guide spread on textured green fabric" width="1920" height="1076" loading="lazy" decoding="async">';
  if(p.id==='fauna-settings')return loopVideo('assets/fauna-cover-large-4k-loop.gif','Fauna agent behavior: prompt, thinking, and output',false,'width="3840" height="2880"');
  if(p.id==='models')return loopVideo('assets/eval-omni-loop-hd-v33.gif','Omni model evaluations: animated strengths and weaknesses',true,'width="2392" height="1968"');
  if(p.id==='mcp-api')return '<video class="cover-loop" data-video-src="assets/flora-mcp-api.mp4#t=7" data-loop-start="7" poster="assets/cover-posters/flora-mcp-api-at-7s.webp" aria-label="FLORA MCP and API launch animation" width="1920" height="1080" muted autoplay playsinline preload="none" disablepictureinpicture></video>';
