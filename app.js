@@ -201,7 +201,28 @@ function renderMcpExamples() {
 const modelEvalImage = (id, title) => `<img src="assets/evaluation-study-${id === 'omni' ? 3 : 5}.png" alt="${esc(title)}" width="3200" height="2584" loading="lazy">`;
 const modelGraphs=window.renderEvaluationStudy ? window.renderEvaluationStudy() : '';
 const modelContext=`<section class="model-context" aria-label="Study context"><h2>Scope and interpretation</h2><p>These boards distinguish published benchmark results from workflow observations and proposed experiments. The lamp example is an original AI-generated illustration, not a scored model comparison. Sample prompts describe candidate test inputs.</p><p>Coverage and image-generation comparisons retain their source definitions, model cohort and publication dates. They should not be interpreted as a single overall ranking across all tasks.</p></section>`;
-function designPages(p){return p.designs.map(d=>`<figure class="detail-design custom-design"><div class="custom-surface"><img src="assets/${d.image}" alt="${esc(d.title)}" loading="lazy" decoding="async" style="max-width:${d.width||640}px"></div><figcaption><h2>${esc(d.title)}</h2>${d.copy?`<p>${esc(d.copy)}</p>`:''}</figcaption></figure>`).join('');}
+function designPages(project) {
+ return project.designs.map(design=>{
+  const isManualSpread=design.image==='operating-manual-workflow-spread.png';
+  const caption=`<figcaption><h2>${esc(design.title)}</h2>${design.copy?`<p>${esc(design.copy)}</p>`:''}</figcaption>`;
+  const surface=isManualSpread?renderManualSpread(design.image):`<div class="custom-surface"><img src="assets/${design.image}" alt="${esc(design.title)}" loading="lazy" decoding="async" style="max-width:${design.width||640}px"></div>`;
+  return `<figure class="detail-design custom-design${isManualSpread?' manual-spread':''}">${surface}${caption}</figure>`;
+ }).join('');
+}
+
+function renderManualSpread(image) {
+ // These bounds exclude the original screenshot's gray gutters.
+ const panels=[
+  {x:8,y:8,width:690,height:928,alt:'Operating Manual cover'},
+  {x:715,y:8,width:714,height:928,alt:'Phases of Creative Evolution, from experimentation to platformization'},
+  {x:13,y:949,width:1416,height:900,alt:'FLORA canvas showing a sneaker sketch developed into product and campaign imagery'}
+ ];
+ return `<div class="manual-panels">${panels.map(({x,y,width,height,alt})=>`
+  <div class="manual-panel" style="aspect-ratio:${width}/${height}">
+   <img src="assets/${image}" width="1438" height="1858" alt="${esc(alt)}" decoding="async"
+    style="width:${1438/width*100}%;left:${-x/width*100}%;top:${-y/height*100}%">
+  </div>`).join('')}</div>`;
+}
 const selected=document.body.dataset.project;
 if(selected){
  const p=projects.find(p=>p.id===selected);
