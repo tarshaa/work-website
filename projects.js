@@ -323,6 +323,12 @@ window.PORTFOLIO = [
     "journey": "The Operating Manual and Field Guide bring generative practice into print. Essays, storyboards, and workflow diagrams show how creative intent becomes a sequence of decisions: choosing references, shaping outputs, reviewing results, and developing a repeatable process.",
     "designs": [
       {
+        "image": "operating-manual-workflow-spread.png",
+        "title": "From experimentation to a repeatable workflow",
+        "copy": "The Operating Manual describes experimentation, systematization, and platformization as stages in creative practice. The accompanying canvas follows a product sketch through analysis, rendering, and campaign imagery, showing the intermediate steps that a finished image often conceals.",
+        "width": 1000
+      },
+      {
         "image": "operating-manual-field-guide.webp",
         "title": "The Mechanics of Meaning",
         "copy": "An editorial spread pairing Anna Gorham’s essay with a visual study. The wide title, illustration, and two-column text establish a clear sequence across the facing pages.",
@@ -339,12 +345,6 @@ window.PORTFOLIO = [
         "title": "Creative access and authorship",
         "copy": "This contribution by Maxim Leyzerovich pairs a speculative system-policy report with images about access to creative tools. The spread places questions of agency and expression alongside the work, inviting readers to consider who can create and how a tool shapes that possibility.",
         "width": 1400
-      },
-      {
-        "image": "operating-manual-workflow-spread.png",
-        "title": "From experimentation to a repeatable workflow",
-        "copy": "The Operating Manual describes experimentation, systematization, and platformization as stages in creative practice. The accompanying canvas follows a product sketch through analysis, rendering, and campaign imagery, showing the intermediate steps that a finished image often conceals.",
-        "width": 1000
       }
     ],
     "links": []
