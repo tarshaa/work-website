@@ -167,7 +167,7 @@ window.PORTFOLIO = [
     "id": "motion",
     "slide": 6,
     "node": "7090-13",
-    "title": "Elements + Microinteractions",
+    "title": "Interface + interactions",
     "company": "FLORA",
     "date": "2025–present",
     "role": "Interaction design",
