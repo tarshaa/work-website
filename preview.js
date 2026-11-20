@@ -60,7 +60,12 @@ function cover(p,n){
  if(p.id==='models')return loopVideo('assets/eval-omni-loop-hd-v33.gif','Omni model evaluations: animated strengths and weaknesses',true,'width="2392" height="1968"');
  if(p.id==='mcp-api')return '<video class="cover-loop" data-video-src="assets/flora-mcp-api.mp4#t=7" data-loop-start="7" poster="assets/cover-posters/flora-mcp-api-at-7s.webp" aria-label="FLORA MCP and API launch animation" width="1920" height="1080" muted autoplay playsinline preload="none" disablepictureinpicture></video>';
  if(p.id==='physical')return '<img src="assets/physical-sticker-pack-updated.webp" alt="FLORA sticker pack with controller, ticket, screen, booklet, tag, and illustrated designs" width="2469" height="1575" loading="lazy" decoding="async">';
- if(p.id==='feature-demos')return '<img src="assets/features-product-design.png" alt="FLORA canvas with collaborator comments, sharing permissions, team credits, and a keyboard shortcut panel" width="1498" height="723" loading="lazy" decoding="async">';
+ if(p.id==='feature-demos')return `<span class="feature-composition" role="img" aria-label="FLORA canvas with collaborator comments, sharing permissions, team credits, and a keyboard shortcut panel">
+   <img class="feature-comments" src="assets/features-canvas-comments.webp" width="726" height="736" alt="" loading="lazy" decoding="async">
+   <img class="feature-sharing" src="assets/features-sharing-permissions.webp" width="626" height="500" alt="" loading="lazy" decoding="async">
+   <img class="feature-credits" src="assets/features-team-credits.webp" width="1192" height="658" alt="" loading="lazy" decoding="async">
+   <img class="feature-shortcuts" src="assets/features-keyboard-shortcuts.webp" width="2042" height="582" alt="" loading="lazy" decoding="async">
+ </span>`;
  let src='assets/'+(p.asset||assets[p.id]);
  const alt=p.newMotion?p.title+' motion study':p.title+' project cover';
  return src.endsWith('.gif') ? loopVideo(src,alt,n<2&&!p.lab) : `<img src="${src}" alt="${esc(alt)}" loading="lazy" decoding="async">`;
