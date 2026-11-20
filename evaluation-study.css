@@ -15,11 +15,100 @@ body[data-project="models"] .eval-figure figcaption{display:grid;gap:5px;font-fa
 .eval-lightbox>a{display:inline-block;margin-top:14px;color:#2763dc;font-size:13px}
 @media(max-width:760px){body[data-project="models"] main.simple-detail#main{padding:28px 20px 48px}body[data-project="models"] .eval-gallery{gap:32px}.eval-lightbox{width:calc(100vw - 16px);padding:10px}}
 
-/* Keep the full Recraft study while trimming its separate footer strip. */
-body[data-project="models"] #eval-board-4 .eval-open img,
-.eval-lightbox[data-board="4"] .eval-lightbox-media img {
+/* Crop the footer strip below the prompt in the gallery and full-size view. */
+body[data-project="models"] :is(#eval-board-4,#eval-board-6,#eval-board-7) .eval-open :is(img,video),
+.eval-lightbox:is([data-board="4"],[data-board="6"],[data-board="7"]) .eval-lightbox-media :is(img,video) {
   aspect-ratio: 3200 / 2368;
   object-fit: cover;
   object-position: top;
 }
-.eval-lightbox[data-board="4"] > [data-eval-original] { display: none; }
+.eval-lightbox:is([data-board="4"],[data-board="6"],[data-board="7"]) > [data-eval-original] { display: none; }
+
+.constraint-board {
+  --score-green: #087235;
+  --score-fill: #16d550;
+  padding: clamp(16px,4vw,44px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: 15px/1.45 var(--sans);
+  color: #151515;
+  background: #fff;
+}
+.constraint-board h3 {
+  margin: 0;
+  font-size: clamp(24px,3vw,36px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+.constraint-board header p { margin: 8px 0 24px; color: #565b58; }
+.constraint-board header a { color: inherit; text-underline-offset: 3px; }
+.constraint-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.25fr);
+  gap: clamp(24px,4vw,48px);
+  align-items: start;
+}
+.constraint-board h4 { margin: 0 0 12px; font-size: 16px; font-weight: 600; }
+.constraint-board h4 span { color: #565b58; font-size: .8em; font-weight: 400; }
+.constraint-columns,.constraint-model {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 55px 63px;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  text-align: left;
+}
+.constraint-columns { color: #565b58; font-size: 13px; }
+.constraint-columns span:nth-child(n+2),.constraint-model span:nth-child(n+2) { text-align: right; }
+.constraint-model {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-top: 1px solid #e4e7e4;
+  box-shadow: inset 2px 0 transparent;
+  background: white;
+  color: inherit;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background-color .24s,color .24s,box-shadow .24s;
+}
+.constraint-model[aria-pressed="true"] {
+  background: #e8faed;
+  color: var(--score-green);
+  box-shadow: inset 3px 0 var(--score-fill);
+}
+.constraint-model:focus-visible { position: relative; outline: 2px solid var(--score-green); outline-offset: 2px; }
+.constraint-note { margin: 12px 0 0; color: #565b58; font-size: 13px; }
+.constraint-active-model { margin: 0 0 7px; color: var(--score-green); font-weight: 600; }
+.constraint-scores { margin: 0; }
+.constraint-scores > div {
+  display: grid;
+  grid-template-columns: minmax(0,1.25fr) minmax(0,1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+  border-top: 1px solid #eaedea;
+  font-size: 13px;
+}
+.constraint-scores dd { display: grid; grid-template-columns: minmax(0,1fr) 34px; align-items: center; gap: 8px; margin: 0; }
+.constraint-track { display: block; height: 6px; background: #edf0ed; }
+.constraint-track > span {
+  display: block;
+  height: 100%;
+  background: var(--score-fill);
+  transform: scaleX(var(--score));
+  transform-origin: left;
+  transition: transform .48s cubic-bezier(.22,1,.36,1);
+}
+.constraint-value { color: var(--score-green); font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.constraint-prompt {
+  margin: 24px 0 0;
+  padding: 14px;
+  background: #f5f7f5;
+  color: var(--score-green);
+  font: 13px/1.55 "Roboto Mono", monospace;
+}
+@media(max-width:760px) { .constraint-layout { grid-template-columns: minmax(0,1fr); } }
+@media(prefers-reduced-motion:reduce) { .constraint-model,.constraint-track > span { transition: none; } }
