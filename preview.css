@@ -30,6 +30,7 @@ main{margin-left:var(--sidebar);padding:39px 24px 0 clamp(72px,10vw,180px);max-w
 .cover.physical,.cover.feature{background:transparent;border-color:transparent;}
 .cover.physical .physical-collection{max-height:100%;}
 .cover.feature img{height:auto;max-height:100%;object-fit:contain;border-radius:8px;}
+#mcp-api .cover{aspect-ratio:16/9;border:0;}
 .card-meta{flex-wrap:wrap;row-gap:5px;}
 .card-meta .client-name{color:#151515;}
 #project-nav a{align-items:flex-start;gap:10px;}
