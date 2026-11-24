@@ -28,7 +28,7 @@ const newMotion=[
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
-if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Product design · Agent behavior';}
+if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Product & Brand · Agent behavior';}
 const faunaIndex=work.indexOf(fauna);
 const featuresIndex=work.findIndex(p=>p.id==='feature-demos');
 if(faunaIndex>=0&&featuresIndex>=0){
