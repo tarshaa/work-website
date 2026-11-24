@@ -28,12 +28,7 @@ const newMotion=[
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
-if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Product & Brand · Agent behavior';}
-const faunaIndex=work.indexOf(fauna);
-const featuresIndex=work.findIndex(p=>p.id==='feature-demos');
-if(faunaIndex>=0&&featuresIndex>=0){
- [work[faunaIndex],work[featuresIndex]]=[work[featuresIndex],work[faunaIndex]];
-}
+if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Brand + Product Design';}
 work.splice(6,0,...newMotion);
 const lab=window.PORTFOLIO.filter(p=>p.lab);
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
