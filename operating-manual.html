@@ -15,9 +15,10 @@
   <style>
     body[data-project="operating-manual"] main.simple-detail{width:min(1200px,100%);}
     body[data-project="operating-manual"] h1{max-width:850px;text-wrap:balance;}
-    body[data-project="operating-manual"] .detail-media{margin-top:30px;}
-    body[data-project="operating-manual"] .detail-media > :is(.custom-design,.field-guide-film){width:min(100%,860px);margin-inline:auto;}
-    body[data-project="operating-manual"] .detail-media > .manual-spread{width:100%;}
+    body[data-project="operating-manual"] .detail-media{margin-top:30px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:30px 20px;}
+    body[data-project="operating-manual"] .detail-media > :is(.custom-design,.field-guide-film){min-width:0;width:100%;margin-inline:0;}
+    body[data-project="operating-manual"] .detail-media > .manual-spread{grid-column:1/-1;}
+    @media(max-width:760px){body[data-project="operating-manual"] .detail-media{grid-template-columns:minmax(0,1fr);gap:24px;}}
     .manual-panels{display:grid;grid-template-columns:minmax(0,.744fr) minmax(0,.769fr) minmax(0,1.573fr);align-items:start;gap:6px;}
     .manual-panel{position:relative;overflow:hidden;border-radius:8px;}
     .manual-panel img{display:block;position:absolute;max-width:none;height:auto;}
@@ -25,7 +26,7 @@
     .field-guide-film video{display:block;width:100%;height:auto;border-radius:12px;background:#111;}
     .field-guide-film figcaption{font-size:13px;color:var(--muted);margin-top:12px;}
   </style>
-  <script src="field-guide-film.js?v=manual-spread-first-20261120" defer></script>
+  <script src="field-guide-film.js?v=field-guide-grid-20261124" defer></script>
 </head>
 <body data-project="operating-manual">
   <div class="site-micrographics" aria-hidden="true"><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="mark"></i><i class="ticks"></i></div>

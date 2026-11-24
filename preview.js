@@ -28,7 +28,7 @@ const newMotion=[
 ];
 const work=window.PORTFOLIO.filter(p=>!p.lab);
 const fauna=work.find(p=>p.id==='fauna-settings');
-if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Brand + Product Design';}
+if(fauna){fauna.title='Fauna: designing agent behavior';fauna.role='Product design · Agent behavior';}
 work.splice(6,0,...newMotion);
 const lab=window.PORTFOLIO.filter(p=>p.lab);
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
