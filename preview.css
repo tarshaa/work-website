@@ -31,7 +31,7 @@ main{margin-left:var(--sidebar);padding:39px 24px 0 clamp(72px,10vw,180px);max-w
 .cover.physical .physical-collection{max-height:100%;}
 /* Each pair uses one frame ratio, with media scaled proportionally. */
 :is(#mcp-api,#fundraise) .cover{aspect-ratio:16/9;border:0;}
-:is(#motion,#fauna-settings) .cover{aspect-ratio:3/2;}
+#motion .cover{aspect-ratio:3/2;}
 #fauna-settings .cover video{object-fit:cover;}
 .card-meta{flex-wrap:wrap;row-gap:5px;}
 .card-meta .client-name{color:#151515;}
