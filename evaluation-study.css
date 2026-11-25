@@ -16,8 +16,8 @@ body[data-project="models"] .eval-figure figcaption{display:grid;gap:5px;font-fa
 @media(max-width:760px){body[data-project="models"] main.simple-detail#main{padding:28px 20px 48px}body[data-project="models"] .eval-gallery{gap:32px}.eval-lightbox{width:calc(100vw - 16px);padding:10px}}
 
 /* Crop the footer strip below the prompt in the gallery and full-size view. */
-body[data-project="models"] :is(#eval-board-4,#eval-board-6,#eval-board-7) .eval-open :is(img,video),
-.eval-lightbox:is([data-board="4"],[data-board="6"],[data-board="7"]) .eval-lightbox-media :is(img,video) {
+body[data-project="models"] :is(#eval-board-4,#eval-board-6) .eval-open :is(img,video),
+.eval-lightbox:is([data-board="4"],[data-board="6"]) .eval-lightbox-media :is(img,video) {
   aspect-ratio: 3200 / 2368;
   object-fit: cover;
   object-position: top;
@@ -112,3 +112,54 @@ body[data-project="models"] :is(#eval-board-4,#eval-board-6,#eval-board-7) .eval
 }
 @media(max-width:760px) { .constraint-layout { grid-template-columns: minmax(0,1fr); } }
 @media(prefers-reduced-motion:reduce) { .constraint-model,.constraint-track > span { transition: none; } }
+
+
+.eval-coverage-title {
+  margin: 0 0 12px;
+  font-size: clamp(18px,2.5vw,26px);
+  font-weight: 500;
+}
+
+/* Keep source rows 690–2368, excluding the summary and footer. */
+body[data-project="models"] #eval-board-7 .eval-open video,
+.eval-lightbox[data-board="7"] .eval-lightbox-media video {
+  aspect-ratio: 3200 / 1678;
+  object-fit: cover;
+  object-position: center 76.16%;
+}
+
+.evidence-timeline {
+  position: relative;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .evidence-timeline::before,
+  .evidence-timeline-marker {
+    position: absolute;
+    left: 3.5625%;
+    top: 80.55%;
+    width: .875%;
+    aspect-ratio: 1;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+
+  .evidence-timeline::before {
+    content: "";
+    background: #111;
+  }
+
+  .evidence-timeline-marker {
+    background: #00d600;
+    animation: evidence-checkpoints 7s cubic-bezier(.45,0,.25,1) infinite;
+  }
+}
+
+@keyframes evidence-checkpoints {
+  0%, 12% { left: 3.5625%; }
+  24%, 32% { left: 24.1875%; }
+  44%, 52% { left: 44.8125%; }
+  66%, 74% { left: 72.3125%; }
+  88%, 100% { left: 94.5%; }
+}
